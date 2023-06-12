@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03A0528E85A077029EB9BDB7 /* Pods_Smart_Healthcare_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3DD431F398FA3BA1B3ACB1 /* Pods_Smart_Healthcare_App.framework */; };
-		4E36059B2A3353BF00357C2A /* Timeburner-xJB8.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E36059A2A3353BF00357C2A /* Timeburner-xJB8.ttf */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
 		4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A52A3605E700357C2A /* ImageButtonView.xib */; };
 		4E3605A92A360D8100357C2A /* MedicalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */; };
 		4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */; };
+		4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */; };
 		4E4C031D2A2C87F4006F8138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C031C2A2C87F4006F8138 /* AppDelegate.swift */; };
 		4E4C031F2A2C87F4006F8138 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C031E2A2C87F4006F8138 /* SceneDelegate.swift */; };
 		4E4C03262A2C87F5006F8138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C03252A2C87F5006F8138 /* Assets.xcassets */; };
@@ -32,16 +31,18 @@
 		4EF0438F2A31D575009C9C18 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0438E2A31D575009C9C18 /* BaseViewController.swift */; };
 		4EF043922A31D978009C9C18 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF043912A31D978009C9C18 /* Color+Extension.swift */; };
 		4EF043942A32175F009C9C18 /* AlphaBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF043932A32175F009C9C18 /* AlphaBackgroundView.swift */; };
+		528EB58DE3DB8E81AA5E5644 /* Pods_Smart_care_bedside_display_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D94805729B17BDE9C3552 /* Pods_Smart_care_bedside_display_system.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E36059A2A3353BF00357C2A /* Timeburner-xJB8.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Timeburner-xJB8.ttf"; path = "../../../Library/Fonts/Timeburner-xJB8.ttf"; sourceTree = "<group>"; };
+		230D94805729B17BDE9C3552 /* Pods_Smart_care_bedside_display_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_care_bedside_display_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
 		4E3605A52A3605E700357C2A /* ImageButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageButtonView.xib; sourceTree = "<group>"; };
 		4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInformationViewController.swift; sourceTree = "<group>"; };
 		4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalInformationViewController.xib; sourceTree = "<group>"; };
+		4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Timeburner-xJB8.ttf"; sourceTree = "<group>"; };
 		4E4C03192A2C87F4006F8138 /* Smart care bedside display system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart care bedside display system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4C031C2A2C87F4006F8138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E4C031E2A2C87F4006F8138 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,9 +62,10 @@
 		4EF0438E2A31D575009C9C18 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4EF043912A31D978009C9C18 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4EF043932A32175F009C9C18 /* AlphaBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaBackgroundView.swift; sourceTree = "<group>"; };
+		7B0C6B4D25D3A0944F37EAC9 /* Pods-Smart care bedside display system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart care bedside display system.debug.xcconfig"; path = "Target Support Files/Pods-Smart care bedside display system/Pods-Smart care bedside display system.debug.xcconfig"; sourceTree = "<group>"; };
+		ACAB3E351DD11AA25C369A47 /* Pods-Smart care bedside display system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart care bedside display system.release.xcconfig"; path = "Target Support Files/Pods-Smart care bedside display system/Pods-Smart care bedside display system.release.xcconfig"; sourceTree = "<group>"; };
 		B69FAD6850F2F38523B09BB0 /* Pods-Smart Healthcare App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Healthcare App.debug.xcconfig"; path = "Target Support Files/Pods-Smart Healthcare App/Pods-Smart Healthcare App.debug.xcconfig"; sourceTree = "<group>"; };
 		CB1F36451E091C20B6834579 /* Pods-Smart Healthcare App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Healthcare App.release.xcconfig"; path = "Target Support Files/Pods-Smart Healthcare App/Pods-Smart Healthcare App.release.xcconfig"; sourceTree = "<group>"; };
-		EB3DD431F398FA3BA1B3ACB1 /* Pods_Smart_Healthcare_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Healthcare_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A0528E85A077029EB9BDB7 /* Pods_Smart_Healthcare_App.framework in Frameworks */,
+				528EB58DE3DB8E81AA5E5644 /* Pods_Smart_care_bedside_display_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +112,7 @@
 		4E4C031B2A2C87F4006F8138 /* Smart Healthcare App */ = {
 			isa = PBXGroup;
 			children = (
-				4E36059A2A3353BF00357C2A /* Timeburner-xJB8.ttf */,
+				4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */,
 				4E4C031C2A2C87F4006F8138 /* AppDelegate.swift */,
 				4E4C031E2A2C87F4006F8138 /* SceneDelegate.swift */,
 				4E4C03382A2C8A2D006F8138 /* Model */,
@@ -181,6 +183,8 @@
 			children = (
 				B69FAD6850F2F38523B09BB0 /* Pods-Smart Healthcare App.debug.xcconfig */,
 				CB1F36451E091C20B6834579 /* Pods-Smart Healthcare App.release.xcconfig */,
+				7B0C6B4D25D3A0944F37EAC9 /* Pods-Smart care bedside display system.debug.xcconfig */,
+				ACAB3E351DD11AA25C369A47 /* Pods-Smart care bedside display system.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,7 +192,7 @@
 		92DA37CE6E5742457B1F8515 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB3DD431F398FA3BA1B3ACB1 /* Pods_Smart_Healthcare_App.framework */,
+				230D94805729B17BDE9C3552 /* Pods_Smart_care_bedside_display_system.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,9 +261,9 @@
 				4E4C03262A2C87F5006F8138 /* Assets.xcassets in Resources */,
 				4E4C03372A2C89FD006F8138 /* Login.xib in Resources */,
 				4EF043172A31B195009C9C18 /* ScanQRCodeViewController.xib in Resources */,
-				4E36059B2A3353BF00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */,
 				4EA026FE2A3336DF007C0D4F /* PersonalInformationViewController.xib in Resources */,
+				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
 			);
@@ -283,7 +287,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Smart Healthcare App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Smart care bedside display system-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,7 +448,7 @@
 		};
 		4E4C032E2A2C87F5006F8138 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B69FAD6850F2F38523B09BB0 /* Pods-Smart Healthcare App.debug.xcconfig */;
+			baseConfigurationReference = 7B0C6B4D25D3A0944F37EAC9 /* Pods-Smart care bedside display system.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,7 +477,7 @@
 		};
 		4E4C032F2A2C87F5006F8138 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB1F36451E091C20B6834579 /* Pods-Smart Healthcare App.release.xcconfig */;
+			baseConfigurationReference = ACAB3E351DD11AA25C369A47 /* Pods-Smart care bedside display system.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

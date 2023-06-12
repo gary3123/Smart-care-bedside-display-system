@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/Gary/Desktop/Smart Healthcare App/Smart care bedside display system.xcodeproj">
+      location = "group:Smart care bedside display system.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

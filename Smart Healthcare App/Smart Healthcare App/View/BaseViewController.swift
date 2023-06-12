@@ -38,6 +38,6 @@ class BaseViewController: UIViewController {
     func setNavigationbarGradientColor() {
         let gradient = CAGradientLayer()
         let sizeLength = self.view.bounds.size.width
-        let frame
+        
     }
 }
