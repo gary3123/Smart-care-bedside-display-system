@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Timeburner-xJB8.ttf">
+            <string>TimeBurner</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Login" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
+            <connections>
+                <outlet property="accountTextField" destination="Rrn-kx-tTy" id="3sK-k8-B1G"/>
+                <outlet property="loginButton" destination="lcR-Fm-AAd" id="3gO-wE-IvA"/>
+                <outlet property="loginView" destination="TW8-KC-zxy" id="1CW-dW-6GL"/>
+                <outlet property="passwordTextField" destination="nkl-a3-FfG" id="CVM-LC-j1I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-KC-zxy">
+                    <rect key="frame" x="16" y="187.5" width="288" height="380.5"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkl-a3-FfG">
+                    <rect key="frame" x="37.5" y="341" width="245" height="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcR-Fm-AAd">
+                    <rect key="frame" x="37.5" y="492.5" width="245" height="45.5"/>
+                    <color key="backgroundColor" red="0.2941176593" green="0.64313727620000005" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="24"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="LOGIN">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickLogin" destination="-2" eventType="touchUpInside" id="NFI-W3-qUr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-BZ-yn4">
+                    <rect key="frame" x="73.5" y="217.5" width="173" height="38"/>
+                    <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="42"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrn-kx-tTy">
+                    <rect key="frame" x="37.5" y="285.5" width="245" height="35.5"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nkl-a3-FfG" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.85" id="0jQ-bQ-MRL"/>
+                <constraint firstItem="TW8-KC-zxy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="4Gz-l3-3b1"/>
+                <constraint firstItem="jOx-BZ-yn4" firstAttribute="top" secondItem="TW8-KC-zxy" secondAttribute="top" constant="30" id="6Wn-8i-66f"/>
+                <constraint firstItem="TW8-KC-zxy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="EYO-wl-tKZ"/>
+                <constraint firstItem="jOx-BZ-yn4" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.6" id="FrM-N8-ejD"/>
+                <constraint firstItem="Rrn-kx-tTy" firstAttribute="centerX" secondItem="jOx-BZ-yn4" secondAttribute="centerX" id="G8N-P6-ysC"/>
+                <constraint firstItem="jOx-BZ-yn4" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="Hpu-p3-wqf"/>
+                <constraint firstItem="TW8-KC-zxy" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.67" id="J1W-nP-pcN"/>
+                <constraint firstItem="jOx-BZ-yn4" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.1" id="M1S-7j-RhP"/>
+                <constraint firstItem="nkl-a3-FfG" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.105125" id="N1z-WR-MX7"/>
+                <constraint firstItem="nkl-a3-FfG" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="Tt1-uF-ay2"/>
+                <constraint firstItem="lcR-Fm-AAd" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.85" id="Uvo-IR-1TU"/>
+                <constraint firstItem="Rrn-kx-tTy" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.0932983" id="XQo-uV-p8n"/>
+                <constraint firstItem="nkl-a3-FfG" firstAttribute="top" secondItem="Rrn-kx-tTy" secondAttribute="bottom" constant="20" id="a1P-mg-Vvz"/>
+                <constraint firstItem="Rrn-kx-tTy" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.85" id="bt3-No-zxp"/>
+                <constraint firstItem="lcR-Fm-AAd" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.12" id="fqm-4j-zT1"/>
+                <constraint firstItem="Rrn-kx-tTy" firstAttribute="top" secondItem="jOx-BZ-yn4" secondAttribute="bottom" constant="30" id="kIl-rC-GKP"/>
+                <constraint firstItem="Rrn-kx-tTy" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="m2z-JB-uVL"/>
+                <constraint firstItem="lcR-Fm-AAd" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="puS-az-d0O"/>
+                <constraint firstItem="lcR-Fm-AAd" firstAttribute="bottom" secondItem="TW8-KC-zxy" secondAttribute="bottom" constant="-30" id="r85-uL-OMV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TW8-KC-zxy" secondAttribute="bottom" id="x6x-ha-tXQ"/>
+            </constraints>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
