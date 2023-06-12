@@ -33,7 +33,7 @@ class Login: BaseViewController {
     func setup() {
         setLoginView()
         setTextField()
-        setNavigationbar(backgroundcolor: .ThemeColor)
+        setNavigationbarGradientColor()
     }
     
     func setTextField() {
@@ -43,7 +43,7 @@ class Login: BaseViewController {
         accountTextField?.layer.borderWidth = 2
         accountTextField?.backgroundColor = .clear
         accountTextField?.layer.masksToBounds = true
-        accountTextField?.setTextFieldImage(systemImageName: "person.text.rectangle",
+        accountTextField?.setTextFieldImage(systemImageName: "person.crop.rectangle",
                                             imageX: 13,
                                             imageY: 5,
                                             imageWidth: 40,

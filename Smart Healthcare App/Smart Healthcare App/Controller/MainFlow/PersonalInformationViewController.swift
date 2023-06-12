@@ -19,7 +19,7 @@ class PersonalInformationViewController: UIViewController {
    
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        print("PersonalInformationViewController")
     }
     
     // MARK: - Setup

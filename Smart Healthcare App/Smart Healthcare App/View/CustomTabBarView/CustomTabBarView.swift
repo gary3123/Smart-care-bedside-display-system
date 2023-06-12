@@ -12,6 +12,8 @@ class CustomTabBarView: UIView {
     // 將需要繼承剛剛建立客製化按鈕的 class 宣告
     @IBOutlet weak var personalInformation: ImageButtonView!
     @IBOutlet weak var medicalInformation: ImageButtonView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var stackView: UIStackView!
 
     // MARK: - Variables
     
@@ -43,6 +45,28 @@ class CustomTabBarView: UIView {
                                      labelText: vcTitleArray[1],
                                      index: 1,
                                      delegate: self)
+        DispatchQueue
+            .main.async {
+                let gradient = CAGradientLayer()
+                let sizeLength = self.stackView.bounds.size.width
+                let frameAndStatusBar = CGRect(x: 0, y: 0, width: sizeLength, height: self.stackView.bounds.size.height)
+                gradient.frame = frameAndStatusBar
+                gradient.colors = [UIColor.ThemeColor?.cgColor as Any,
+                                   UIColor.TintColor?.cgColor as Any]
+                gradient.startPoint = CGPoint(x: 0, y: 0)
+                gradient.endPoint = CGPoint(x: 1, y: 1)
+                gradient.locations = [1,0]
+                self.backgroundImage.image = self.image(fromLayer: gradient)
+            }
+       
+    }
+    
+    func image(fromLayer layer: CAGradientLayer) -> UIImage {
+        UIGraphicsBeginImageContext(layer.frame.size)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        let outputImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return outputImage
     }
     
     

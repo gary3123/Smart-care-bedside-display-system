@@ -45,6 +45,7 @@ class ImageButtonView: UIView {
                  delegate: ImageButtonViewDelegate) {
         imageView?.image = UIImage(systemName: imageName)
         label?.text = labelText
+        label?.textColor = .white
         button?.setTitle("", for: .normal)
         button?.tag = index
         self.delegate = delegate

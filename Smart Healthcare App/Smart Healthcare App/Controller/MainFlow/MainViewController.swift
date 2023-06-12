@@ -40,6 +40,8 @@ class MainViewController: BaseViewController {
         tabBarView.onItemsTapped = {
             self.updateView(index: $0) // $0 從第一個開始掃描
         }
+        tabBarView.layer.cornerRadius = 20
+        tabBarView.layer.masksToBounds = true
     }
     
     func updateView(index: Int) {
@@ -72,13 +74,5 @@ class MainViewController: BaseViewController {
     
 }
 
-extension UIImage {
-    class func imageWithView(view: UIView) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
-        view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img
-    }
-}
+
 // MARK: - Protocol

@@ -9,4 +9,8 @@ import UIKit
 
 class MedicalInformationViewController: UIViewController {
     
+    override func viewDidLoad() {
+        print("MedicalInformationViewController")
+    }
+    
 }

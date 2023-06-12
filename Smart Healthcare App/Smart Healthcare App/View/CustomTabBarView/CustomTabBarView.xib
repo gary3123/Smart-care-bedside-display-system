@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,8 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBarView" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="CsP-OA-yd6" id="7Zh-xe-VOH"/>
                 <outlet property="medicalInformation" destination="tmh-Zr-6XA" id="z3Z-30-cj0"/>
                 <outlet property="personalInformation" destination="QPZ-gb-raD" id="CB2-N6-UTx"/>
+                <outlet property="stackView" destination="fzg-KB-EE1" id="Dwd-1Q-6Nf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,32 +21,45 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CsP-OA-yd6">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-KB-EE1">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-gb-raD" customClass="ImageButtonView" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="106"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="106"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qxp-48-2AG">
+                            <rect key="frame" x="196.33333333333334" y="0.0" width="0.33333333333334281" height="106"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmh-Zr-6XA" customClass="ImageButtonView" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
                             <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="106"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="QPZ-gb-raD" firstAttribute="height" secondItem="fzg-KB-EE1" secondAttribute="height" id="4hW-b6-3c2"/>
+                        <constraint firstItem="tmh-Zr-6XA" firstAttribute="width" secondItem="fzg-KB-EE1" secondAttribute="width" multiplier="0.4993" id="JKv-ds-BwB"/>
                         <constraint firstItem="QPZ-gb-raD" firstAttribute="centerY" secondItem="fzg-KB-EE1" secondAttribute="centerY" id="KAc-r6-sD1"/>
-                        <constraint firstItem="QPZ-gb-raD" firstAttribute="width" secondItem="fzg-KB-EE1" secondAttribute="width" multiplier="0.5" id="xaY-ZI-srl"/>
+                        <constraint firstAttribute="trailing" secondItem="tmh-Zr-6XA" secondAttribute="trailing" id="lAK-jD-nwP"/>
+                        <constraint firstItem="QPZ-gb-raD" firstAttribute="width" secondItem="fzg-KB-EE1" secondAttribute="width" multiplier="0.4993" id="xaY-ZI-srl"/>
                     </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="XGB-RQ-1Ki"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="CsP-OA-yd6" firstAttribute="centerX" secondItem="XGB-RQ-1Ki" secondAttribute="centerX" id="3sa-1d-gcA"/>
                 <constraint firstItem="fzg-KB-EE1" firstAttribute="height" secondItem="B2V-oA-RnA" secondAttribute="height" id="7Vd-Mm-utL"/>
+                <constraint firstItem="CsP-OA-yd6" firstAttribute="centerY" secondItem="B2V-oA-RnA" secondAttribute="centerY" id="aNg-oZ-13v"/>
                 <constraint firstAttribute="top" secondItem="fzg-KB-EE1" secondAttribute="top" id="c4B-Ro-6Ka"/>
                 <constraint firstAttribute="trailing" secondItem="fzg-KB-EE1" secondAttribute="trailing" id="e3t-BS-fPj"/>
+                <constraint firstItem="CsP-OA-yd6" firstAttribute="width" secondItem="B2V-oA-RnA" secondAttribute="width" id="fey-fn-XU0"/>
                 <constraint firstItem="fzg-KB-EE1" firstAttribute="leading" secondItem="B2V-oA-RnA" secondAttribute="leading" id="gX1-zD-El0"/>
+                <constraint firstItem="CsP-OA-yd6" firstAttribute="height" secondItem="B2V-oA-RnA" secondAttribute="height" id="m7U-33-9s7"/>
                 <constraint firstItem="fzg-KB-EE1" firstAttribute="width" secondItem="B2V-oA-RnA" secondAttribute="width" id="zDl-2U-Ptl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -52,8 +67,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
