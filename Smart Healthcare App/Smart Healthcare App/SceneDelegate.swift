@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     // MARK: Without NavigationController
                     // let rootVC = MainVC(nibName: String(describing: MainVC.self), bundle: nil)
                     // MARK: With NavigationController
-                     let rootVC = UINavigationController(rootViewController: Login())
+                     let rootVC = UINavigationController(rootViewController: MainViewController())
                     
                     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                     window?.windowScene = windowScene
