@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F02471C2ABCBA62006EA177 /* DotBackgroundAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		230D94805729B17BDE9C3552 /* Pods_Smart_care_bedside_display_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_care_bedside_display_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DotBackgroundAnimate.json; sourceTree = "<group>"; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F02471A2ABCBA35006EA177 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */,
+				3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		4E36059E2A36048800357C2A /* CustomTabBarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +123,7 @@
 		4E4C031B2A2C87F4006F8138 /* Smart Healthcare App */ = {
 			isa = PBXGroup;
 			children = (
-				4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */,
+				3F02471A2ABCBA35006EA177 /* Resource */,
 				4E4C031C2A2C87F4006F8138 /* AppDelegate.swift */,
 				4E4C031E2A2C87F4006F8138 /* SceneDelegate.swift */,
 				4E4C03382A2C8A2D006F8138 /* Model */,
@@ -208,6 +219,7 @@
 				4E4C03152A2C87F4006F8138 /* Sources */,
 				4E4C03162A2C87F4006F8138 /* Frameworks */,
 				4E4C03172A2C87F4006F8138 /* Resources */,
+				A14219567C6D30424E70B37F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +278,7 @@
 				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
+				3F02471C2ABCBA62006EA177 /* DotBackgroundAnimate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +305,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A14219567C6D30424E70B37F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart care bedside display system/Pods-Smart care bedside display system-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart care bedside display system/Pods-Smart care bedside display system-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart care bedside display system/Pods-Smart care bedside display system-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

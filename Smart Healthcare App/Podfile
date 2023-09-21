@@ -6,5 +6,6 @@ target 'Smart care bedside display system' do
   use_frameworks!
 
   # Pods for Smart Healthcare App
+    pod 'lottie-ios' , '4.2.0'
 
 end

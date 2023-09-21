@@ -26,10 +26,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="epY-pv-Tmf">
-                    <rect key="frame" x="105" y="88" width="90" height="90"/>
+                    <rect key="frame" x="0.0" y="73" width="300" height="120"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kma-kD-VNb">
-                    <rect key="frame" x="45" y="180" width="210" height="42"/>
+                    <rect key="frame" x="45" y="195" width="210" height="42"/>
                     <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -49,8 +49,8 @@
                 <constraint firstItem="epY-pv-Tmf" firstAttribute="centerX" secondItem="edD-hF-Ts9" secondAttribute="centerX" id="Aew-u4-l9l"/>
                 <constraint firstItem="epY-pv-Tmf" firstAttribute="centerY" secondItem="edD-hF-Ts9" secondAttribute="centerY" constant="-17" id="CQ7-p6-BJ8"/>
                 <constraint firstItem="BD7-hF-L0q" firstAttribute="centerX" secondItem="edD-hF-Ts9" secondAttribute="centerX" id="GMs-z0-go6"/>
-                <constraint firstItem="epY-pv-Tmf" firstAttribute="width" secondItem="edD-hF-Ts9" secondAttribute="width" multiplier="0.3" id="Pgc-6W-dMN"/>
-                <constraint firstItem="epY-pv-Tmf" firstAttribute="height" secondItem="edD-hF-Ts9" secondAttribute="height" multiplier="0.3" id="dQs-ex-OOd"/>
+                <constraint firstItem="epY-pv-Tmf" firstAttribute="width" secondItem="edD-hF-Ts9" secondAttribute="width" id="Pgc-6W-dMN"/>
+                <constraint firstItem="epY-pv-Tmf" firstAttribute="height" secondItem="edD-hF-Ts9" secondAttribute="height" multiplier="0.4" id="dQs-ex-OOd"/>
                 <constraint firstItem="BD7-hF-L0q" firstAttribute="height" secondItem="edD-hF-Ts9" secondAttribute="height" id="eee-Uf-WU2"/>
                 <constraint firstItem="BD7-hF-L0q" firstAttribute="width" secondItem="edD-hF-Ts9" secondAttribute="width" id="fhw-f1-Zlh"/>
                 <constraint firstItem="kma-kD-VNb" firstAttribute="top" secondItem="epY-pv-Tmf" secondAttribute="bottom" constant="2" id="gZo-ua-j2V"/>
