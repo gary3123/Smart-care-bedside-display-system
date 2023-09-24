@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F02471C2ABCBA62006EA177 /* DotBackgroundAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */; };
+		3F0247932ABF4B3D006EA177 /* PatientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0247912ABF4B3D006EA177 /* PatientListViewController.swift */; };
+		3F0247942ABF4B3D006EA177 /* PatientListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */; };
+		3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */; };
+		3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		230D94805729B17BDE9C3552 /* Pods_Smart_care_bedside_display_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_care_bedside_display_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DotBackgroundAnimate.json; sourceTree = "<group>"; };
+		3F0247912ABF4B3D006EA177 /* PatientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListViewController.swift; sourceTree = "<group>"; };
+		3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientListViewController.xib; sourceTree = "<group>"; };
+		3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientTableViewCell.xib; sourceTree = "<group>"; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
@@ -89,6 +97,52 @@
 				3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3F0247952ABF4B44006EA177 /* PersonalInformation */ = {
+			isa = PBXGroup;
+			children = (
+				4EA026FB2A3336DF007C0D4F /* PersonalInformationViewController.swift */,
+				4EA026FC2A3336DF007C0D4F /* PersonalInformationViewController.xib */,
+			);
+			path = PersonalInformation;
+			sourceTree = "<group>";
+		};
+		3F0247962ABF4B5E006EA177 /* MedicalInformation */ = {
+			isa = PBXGroup;
+			children = (
+				4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */,
+				4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */,
+			);
+			path = MedicalInformation;
+			sourceTree = "<group>";
+		};
+		3F0247972ABF4B86006EA177 /* PatientList */ = {
+			isa = PBXGroup;
+			children = (
+				3F02479C2AC0AC53006EA177 /* Components */,
+				3F0247912ABF4B3D006EA177 /* PatientListViewController.swift */,
+				3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */,
+			);
+			path = PatientList;
+			sourceTree = "<group>";
+		};
+		3F02479C2AC0AC53006EA177 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */,
+				3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3F02479D2AC0B15A006EA177 /* ScanQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				4EF043142A31B195009C9C18 /* ScanQRCodeViewController.swift */,
+				4EF043152A31B195009C9C18 /* ScanQRCodeViewController.xib */,
+			);
+			path = ScanQRCode;
 			sourceTree = "<group>";
 		};
 		4E36059E2A36048800357C2A /* CustomTabBarView */ = {
@@ -161,8 +215,6 @@
 				4EA026FF2A333778007C0D4F /* MainFlow */,
 				4E4C03342A2C89FC006F8138 /* Login.swift */,
 				4E4C03352A2C89FC006F8138 /* Login.xib */,
-				4EF043142A31B195009C9C18 /* ScanQRCodeViewController.swift */,
-				4EF043152A31B195009C9C18 /* ScanQRCodeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,12 +222,12 @@
 		4EA026FF2A333778007C0D4F /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4EA026FB2A3336DF007C0D4F /* PersonalInformationViewController.swift */,
-				4EA026FC2A3336DF007C0D4F /* PersonalInformationViewController.xib */,
+				3F02479D2AC0B15A006EA177 /* ScanQRCode */,
+				3F0247972ABF4B86006EA177 /* PatientList */,
+				3F0247952ABF4B44006EA177 /* PersonalInformation */,
 				4EA027002A3337A1007C0D4F /* MainViewController.swift */,
 				4EA027012A3337A1007C0D4F /* MainViewController.xib */,
-				4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */,
-				4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */,
+				3F0247962ABF4B5E006EA177 /* MedicalInformation */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -270,6 +322,7 @@
 			files = (
 				4E4C03292A2C87F5006F8138 /* LaunchScreen.storyboard in Resources */,
 				4EA027032A3337A1007C0D4F /* MainViewController.xib in Resources */,
+				3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */,
 				4E4C03262A2C87F5006F8138 /* Assets.xcassets in Resources */,
 				4E4C03372A2C89FD006F8138 /* Login.xib in Resources */,
 				4EF043172A31B195009C9C18 /* ScanQRCodeViewController.xib in Resources */,
@@ -278,6 +331,7 @@
 				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
+				3F0247942ABF4B3D006EA177 /* PatientListViewController.xib in Resources */,
 				3F02471C2ABCBA62006EA177 /* DotBackgroundAnimate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +387,7 @@
 			files = (
 				4E4C03362A2C89FC006F8138 /* Login.swift in Sources */,
 				4EA027022A3337A1007C0D4F /* MainViewController.swift in Sources */,
+				3F0247932ABF4B3D006EA177 /* PatientListViewController.swift in Sources */,
 				4EF043922A31D978009C9C18 /* Color+Extension.swift in Sources */,
 				4E4C031D2A2C87F4006F8138 /* AppDelegate.swift in Sources */,
 				4E4C031F2A2C87F4006F8138 /* SceneDelegate.swift in Sources */,
@@ -343,6 +398,7 @@
 				4EF043942A32175F009C9C18 /* AlphaBackgroundView.swift in Sources */,
 				4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */,
 				4EF043162A31B195009C9C18 /* ScanQRCodeViewController.swift in Sources */,
+				3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */,
 				4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */,
 				4EF0438F2A31D575009C9C18 /* BaseViewController.swift in Sources */,
 			);

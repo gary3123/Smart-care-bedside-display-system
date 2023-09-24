@@ -25,7 +25,7 @@ class Login: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     // MARK: - Setup
@@ -87,7 +87,7 @@ class Login: BaseViewController {
     // MARK: - IBAction
     
     @IBAction func clickLogin() {
-        let nextVC = ScanQRCodeViewController()
+        let nextVC = PatientListViewController()
         navigationController?.pushViewController(nextVC, animated: true)
     }
     

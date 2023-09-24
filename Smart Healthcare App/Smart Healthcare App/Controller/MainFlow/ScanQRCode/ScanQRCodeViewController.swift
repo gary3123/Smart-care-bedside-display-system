@@ -29,8 +29,6 @@ class ScanQRCodeViewController: BaseViewController {
     // MARK: - Setup
     func setup() {
         self.title = "Scan QR Code"
-        
-        navigationController?.navigationBar.isHidden = false
     }
     
     func presentCamera() {
@@ -175,9 +173,7 @@ class ScanQRCodeViewController: BaseViewController {
 extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        let nextVC = MainViewController()
-        self.navigationController?.pushViewController(nextVC, animated: true)
-        navigationItem.backBarButtonItem?.isHidden = true
+        self.navigationController?.popViewController(animated: true)
         self.captureSession.stopRunning()
     }
 }

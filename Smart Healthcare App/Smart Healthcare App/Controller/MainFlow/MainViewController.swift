@@ -19,6 +19,7 @@ class MainViewController: BaseViewController {
     var vc: [UIViewController] = []
     var personalInformationVC = PersonalInformationViewController()
     var medicalInformationVC = MedicalInformationViewController()
+    var addRecordBarButtonItem = UIBarButtonItem()
     
     
     // MARK: - LifeCycle
@@ -53,15 +54,23 @@ class MainViewController: BaseViewController {
         navigationItem.title = tabBarView.vcTitleArray[index]
         // 將中間的 container 替換成閉包, delegate 帶進來的值
         containerView.addSubview(vc[index].view)
+        if index == 1 {
+            self.navigationItem.rightBarButtonItems = [addRecordBarButtonItem]
+        } else {
+            self.navigationItem.rightBarButtonItems = []
+        }
         
     }
     
     func setNavigationBar() {
         navigationController?.isNavigationBarHidden = false
-        navigationItem.setHidesBackButton(true, animated: false)
-//        setNavigationbar(backgroundcolor: UIColor.ThemeColor)
+        navigationItem.backButtonTitle = ""
+        addRecordBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(clickAddRecordBarButtonItem))
     }
     
+    @objc func clickAddRecordBarButtonItem() {
+        
+    }
     
     
     // MARK: - IBAction
