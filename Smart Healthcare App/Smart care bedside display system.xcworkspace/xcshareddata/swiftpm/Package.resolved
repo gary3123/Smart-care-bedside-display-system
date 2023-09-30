@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "rvs_autofilltextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RiftValleySoftware/RVS_AutofillTextField.git",
+      "state" : {
+        "revision" : "92d73cc2ace151d6dba8430d24c5768a51df6e60",
+        "version" : "1.3.5"
+      }
+    }
+  ],
+  "version" : 2
+}

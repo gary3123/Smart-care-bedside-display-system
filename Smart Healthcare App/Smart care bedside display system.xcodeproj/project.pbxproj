@@ -24,6 +24,7 @@
 		3FB632282AC806460015AF8D /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */; };
 		3FB6322B2AC808A20015AF8D /* MedicalTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */; };
 		3FB6322C2AC808A20015AF8D /* MedicalTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */; };
+		3FB6322F2AC88DF30015AF8D /* RVS_AutofillTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB6322E2AC88DF30015AF8D /* RVS_AutofillTextField */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -107,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB6322F2AC88DF30015AF8D /* RVS_AutofillTextField in Frameworks */,
 				528EB58DE3DB8E81AA5E5644 /* Pods_Smart_care_bedside_display_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +340,9 @@
 			dependencies = (
 			);
 			name = "Smart care bedside display system";
+			packageProductDependencies = (
+				3FB6322E2AC88DF30015AF8D /* RVS_AutofillTextField */,
+			);
 			productName = "Smart Healthcare App";
 			productReference = 4E4C03192A2C87F4006F8138 /* Smart care bedside display system.app */;
 			productType = "com.apple.product-type.application";
@@ -366,6 +371,9 @@
 				Base,
 			);
 			mainGroup = 4E4C03102A2C87F4006F8138;
+			packageReferences = (
+				3FB6322D2AC88DF30015AF8D /* XCRemoteSwiftPackageReference "RVS_AutofillTextField" */,
+			);
 			productRefGroup = 4E4C031A2A2C87F4006F8138 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -686,6 +694,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FB6322D2AC88DF30015AF8D /* XCRemoteSwiftPackageReference "RVS_AutofillTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RiftValleySoftware/RVS_AutofillTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FB6322E2AC88DF30015AF8D /* RVS_AutofillTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FB6322D2AC88DF30015AF8D /* XCRemoteSwiftPackageReference "RVS_AutofillTextField" */;
+			productName = RVS_AutofillTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E4C03112A2C87F4006F8138 /* Project object */;
 }

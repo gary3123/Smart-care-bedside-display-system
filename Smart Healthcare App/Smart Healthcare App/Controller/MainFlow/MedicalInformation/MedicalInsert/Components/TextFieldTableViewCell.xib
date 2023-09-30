@@ -24,11 +24,18 @@
                         <color key="textColor" name="ThemeColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-QY-bfH">
-                        <rect key="frame" x="144" y="9" width="160" height="42"/>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="請輸入藥名" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-QY-bfH" customClass="RVS_AutofillTextField" customModule="RVS_AutofillTextField">
+                        <rect key="frame" x="80" y="9" width="224" height="42"/>
                         <color key="textColor" name="ThemeColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isWildcardBefore" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isWildcardAfter" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tableBackgroundColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </textField>
                 </subviews>
                 <constraints>
@@ -37,18 +44,23 @@
                     <constraint firstItem="Xmz-QY-bfH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="C5S-Mk-xiR"/>
                     <constraint firstItem="jpG-l7-faI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CWi-3K-ekA"/>
                     <constraint firstItem="jpG-l7-faI" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="FHv-LG-f4r"/>
-                    <constraint firstItem="Xmz-QY-bfH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="lUD-uZ-BQ8"/>
+                    <constraint firstItem="Xmz-QY-bfH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="lUD-uZ-BQ8"/>
                     <constraint firstItem="Xmz-QY-bfH" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="yXQ-zE-jNg"/>
                     <constraint firstAttribute="trailing" secondItem="Xmz-QY-bfH" secondAttribute="trailing" constant="16" id="yyr-KJ-pxe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="txfMedicalName" destination="Xmz-QY-bfH" id="yB6-BC-BU4"/>
+                <outlet property="txfMedicalName" destination="Xmz-QY-bfH" id="kxJ-n5-UPA"/>
             </connections>
             <point key="canvasLocation" x="-40" y="20"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Xmz-QY-bfH">
+            <size key="intrinsicContentSize" width="81.666666666666671" height="21"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="ThemeColor">
             <color red="0.32549019607843138" green="0.44313725490196076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

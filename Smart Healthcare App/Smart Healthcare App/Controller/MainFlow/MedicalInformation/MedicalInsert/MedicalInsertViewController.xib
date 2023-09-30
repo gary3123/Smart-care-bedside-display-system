@@ -4,13 +4,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Timeburner-xJB8.ttf">
+            <string>TimeBurner</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalInsertViewController" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
             <connections>
+                <outlet property="btnSave" destination="El1-XR-kjz" id="Ad9-57-thD"/>
                 <outlet property="tbvMedicalInsert" destination="hKG-bg-bxe" id="OXu-nx-Mqe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,23 +28,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hKG-bg-bxe">
-                    <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="645"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El1-XR-kjz">
+                    <rect key="frame" x="80" y="705" width="215" height="73"/>
+                    <color key="backgroundColor" name="ThemeColor"/>
+                    <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="25"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="SAVE">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtnSave" destination="-2" eventType="touchUpInside" id="u5G-be-nRN"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
-                <constraint firstItem="hKG-bg-bxe" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="S50-eN-E03"/>
-                <constraint firstItem="hKG-bg-bxe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="b7L-KW-uvm"/>
-                <constraint firstItem="hKG-bg-bxe" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="hpX-Kv-Ofk"/>
-                <constraint firstItem="hKG-bg-bxe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ssM-w5-UOp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hKG-bg-bxe" secondAttribute="trailing" id="2L8-ed-K4Y"/>
+                <constraint firstItem="El1-XR-kjz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="4Y5-vz-xmx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="El1-XR-kjz" secondAttribute="bottom" id="FR9-ux-EKl"/>
+                <constraint firstItem="hKG-bg-bxe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fdt-Bl-tE3"/>
+                <constraint firstItem="El1-XR-kjz" firstAttribute="top" secondItem="hKG-bg-bxe" secondAttribute="bottom" constant="10" id="iPR-F4-ydR"/>
+                <constraint firstItem="hKG-bg-bxe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kvd-dd-dmo"/>
+                <constraint firstItem="El1-XR-kjz" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.09" id="mE5-M8-sj9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="El1-XR-kjz" secondAttribute="trailing" constant="80" id="ofk-8T-JiX"/>
             </constraints>
-            <point key="canvasLocation" x="97" y="21"/>
+            <point key="canvasLocation" x="96.799999999999997" y="20.689655172413794"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="ThemeColor">
+            <color red="0.32549019607843138" green="0.44313725490196076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

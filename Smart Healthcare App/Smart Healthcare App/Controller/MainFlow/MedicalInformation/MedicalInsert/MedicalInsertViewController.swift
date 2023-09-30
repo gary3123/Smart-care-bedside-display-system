@@ -12,8 +12,31 @@ class MedicalInsertViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var tbvMedicalInsert: UITableView!
+    @IBOutlet weak var btnSave: UIButton!
     
     // MARK: - Variables
+    let drugNames = [
+        "SILICEA",
+        "Naproxen",
+        "Moisturizing Antibacterial",
+        "Quick Action",
+        "Cuprum aceticum Nicotiana",
+        "Mekinist",
+        "Glimepiride",
+        "Methocarbamol",
+        "anti itch",
+        "NP Thyroid 120",
+        "ChloraPrep One-Step",
+        "Rescue Sleep",
+        "Pain Reliever Extra Strength",
+        "Tussin CF Non Drowsy Multi Symptom"
+    ]
+    
+    let medicalTypeTitle = ["注射", "口服"]
+    let medicalType = ["Injection", "oral"]
+    var selectMedicalTypeIndex: Int? = nil
+    
+    var selectDrugName: String = ""
     
     // MARK: - LifeCycle
     
@@ -43,6 +66,7 @@ class MedicalInsertViewController: UIViewController {
     
     func setupUI() {
         setupTableView()
+        setupBtnSave()
     }
     
     func setupTableView() {
@@ -54,7 +78,15 @@ class MedicalInsertViewController: UIViewController {
         tbvMedicalInsert.delegate = self
     }
     
+    func setupBtnSave() {
+        btnSave.layer.cornerRadius = 30
+    }
+    
     // MARK: - IBAction
+    
+    @IBAction func clickBtnSave() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
 
@@ -69,9 +101,16 @@ extension MedicalInsertViewController: UITableViewDelegate, UITableViewDataSourc
         switch indexPath.row {
         case 0:
             let cell = tbvMedicalInsert.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identified, for: indexPath) as! TextFieldTableViewCell
+            cell.txfMedicalName.text = selectDrugName
+            cell.txfMedicalName.delegate = self
             return cell
         case 1:
             let cell = tbvMedicalInsert.dequeueReusableCell(withIdentifier: MedicalTypeTableViewCell.identified, for: indexPath) as! MedicalTypeTableViewCell
+            if selectMedicalTypeIndex == nil {
+                cell.lbMedicalType.text = ""
+            } else {
+                cell.lbMedicalType.text = medicalTypeTitle[selectMedicalTypeIndex!]
+            }
             return cell
         case 2:
             let cell = tbvMedicalInsert.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.identified, for: indexPath) as! DatePickerTableViewCell
@@ -81,7 +120,25 @@ extension MedicalInsertViewController: UITableViewDelegate, UITableViewDataSourc
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            Alert.showActionSheet(array: medicalTypeTitle, canceltitle: "取消", vc: self) { selectIndex in
+                self.selectMedicalTypeIndex = selectIndex
+                self.tbvMedicalInsert.reloadData()
+            }
+        }
+    }
 }
 
 // MARK: - Protocol
+
+
+
+extension MedicalInsertViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        selectDrugName = textField.text!
+    }
+}
+
 

@@ -11,7 +11,7 @@ class MedicalTypeTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var lbMedicalTypr: UILabel!
+    @IBOutlet weak var lbMedicalType: UILabel!
     
     // MARK: - Variables
     

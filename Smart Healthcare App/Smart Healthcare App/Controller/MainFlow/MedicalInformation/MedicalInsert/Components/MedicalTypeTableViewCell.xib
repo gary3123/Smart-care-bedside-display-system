@@ -54,7 +54,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="lbMedicalTypr" destination="Eu9-Oi-rJ3" id="UYQ-2v-Ihz"/>
+                <outlet property="lbMedicalType" destination="Eu9-Oi-rJ3" id="UYQ-2v-Ihz"/>
             </connections>
             <point key="canvasLocation" x="-40" y="20"/>
         </tableViewCell>
