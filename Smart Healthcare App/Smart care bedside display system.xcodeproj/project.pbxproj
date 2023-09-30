@@ -12,6 +12,18 @@
 		3F0247942ABF4B3D006EA177 /* PatientListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */; };
 		3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */; };
 		3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */; };
+		3FB632152AC49CC60015AF8D /* MedicalInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632132AC49CC60015AF8D /* MedicalInsertViewController.swift */; };
+		3FB632162AC49CC60015AF8D /* MedicalInsertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632142AC49CC60015AF8D /* MedicalInsertViewController.xib */; };
+		3FB6321A2AC563210015AF8D /* MedicalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */; };
+		3FB6321B2AC563210015AF8D /* MedicalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632192AC563210015AF8D /* MedicalTableViewCell.xib */; };
+		3FB6321F2AC805F20015AF8D /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6321D2AC805F20015AF8D /* TextFieldTableViewCell.swift */; };
+		3FB632202AC805F20015AF8D /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6321E2AC805F20015AF8D /* TextFieldTableViewCell.xib */; };
+		3FB632232AC806030015AF8D /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632212AC806030015AF8D /* TextViewTableViewCell.swift */; };
+		3FB632242AC806030015AF8D /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632222AC806030015AF8D /* TextViewTableViewCell.xib */; };
+		3FB632272AC806460015AF8D /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632252AC806460015AF8D /* DatePickerTableViewCell.swift */; };
+		3FB632282AC806460015AF8D /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */; };
+		3FB6322B2AC808A20015AF8D /* MedicalTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */; };
+		3FB6322C2AC808A20015AF8D /* MedicalTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -46,6 +58,18 @@
 		3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientListViewController.xib; sourceTree = "<group>"; };
 		3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientTableViewCell.xib; sourceTree = "<group>"; };
+		3FB632132AC49CC60015AF8D /* MedicalInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInsertViewController.swift; sourceTree = "<group>"; };
+		3FB632142AC49CC60015AF8D /* MedicalInsertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalInsertViewController.xib; sourceTree = "<group>"; };
+		3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTableViewCell.swift; sourceTree = "<group>"; };
+		3FB632192AC563210015AF8D /* MedicalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalTableViewCell.xib; sourceTree = "<group>"; };
+		3FB6321D2AC805F20015AF8D /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		3FB6321E2AC805F20015AF8D /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		3FB632212AC806030015AF8D /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		3FB632222AC806030015AF8D /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewTableViewCell.xib; sourceTree = "<group>"; };
+		3FB632252AC806460015AF8D /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTypeTableViewCell.swift; sourceTree = "<group>"; };
+		3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalTypeTableViewCell.xib; sourceTree = "<group>"; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
@@ -102,6 +126,7 @@
 		3F0247952ABF4B44006EA177 /* PersonalInformation */ = {
 			isa = PBXGroup;
 			children = (
+				3FB632172AC563050015AF8D /* Components */,
 				4EA026FB2A3336DF007C0D4F /* PersonalInformationViewController.swift */,
 				4EA026FC2A3336DF007C0D4F /* PersonalInformationViewController.xib */,
 			);
@@ -111,6 +136,7 @@
 		3F0247962ABF4B5E006EA177 /* MedicalInformation */ = {
 			isa = PBXGroup;
 			children = (
+				3FB632122AC49CA20015AF8D /* MedicalInsert */,
 				4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */,
 				4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */,
 			);
@@ -143,6 +169,40 @@
 				4EF043152A31B195009C9C18 /* ScanQRCodeViewController.xib */,
 			);
 			path = ScanQRCode;
+			sourceTree = "<group>";
+		};
+		3FB632122AC49CA20015AF8D /* MedicalInsert */ = {
+			isa = PBXGroup;
+			children = (
+				3FB6321C2AC804300015AF8D /* Components */,
+				3FB632132AC49CC60015AF8D /* MedicalInsertViewController.swift */,
+				3FB632142AC49CC60015AF8D /* MedicalInsertViewController.xib */,
+			);
+			path = MedicalInsert;
+			sourceTree = "<group>";
+		};
+		3FB632172AC563050015AF8D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */,
+				3FB632192AC563210015AF8D /* MedicalTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3FB6321C2AC804300015AF8D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3FB6321D2AC805F20015AF8D /* TextFieldTableViewCell.swift */,
+				3FB6321E2AC805F20015AF8D /* TextFieldTableViewCell.xib */,
+				3FB632212AC806030015AF8D /* TextViewTableViewCell.swift */,
+				3FB632222AC806030015AF8D /* TextViewTableViewCell.xib */,
+				3FB632252AC806460015AF8D /* DatePickerTableViewCell.swift */,
+				3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */,
+				3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */,
+				3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4E36059E2A36048800357C2A /* CustomTabBarView */ = {
@@ -321,13 +381,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4C03292A2C87F5006F8138 /* LaunchScreen.storyboard in Resources */,
+				3FB632282AC806460015AF8D /* DatePickerTableViewCell.xib in Resources */,
 				4EA027032A3337A1007C0D4F /* MainViewController.xib in Resources */,
 				3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */,
+				3FB632162AC49CC60015AF8D /* MedicalInsertViewController.xib in Resources */,
 				4E4C03262A2C87F5006F8138 /* Assets.xcassets in Resources */,
+				3FB6321B2AC563210015AF8D /* MedicalTableViewCell.xib in Resources */,
+				3FB6322C2AC808A20015AF8D /* MedicalTypeTableViewCell.xib in Resources */,
 				4E4C03372A2C89FD006F8138 /* Login.xib in Resources */,
+				3FB632202AC805F20015AF8D /* TextFieldTableViewCell.xib in Resources */,
 				4EF043172A31B195009C9C18 /* ScanQRCodeViewController.xib in Resources */,
 				4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */,
 				4EA026FE2A3336DF007C0D4F /* PersonalInformationViewController.xib in Resources */,
+				3FB632242AC806030015AF8D /* TextViewTableViewCell.xib in Resources */,
 				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
@@ -390,9 +456,14 @@
 				3F0247932ABF4B3D006EA177 /* PatientListViewController.swift in Sources */,
 				4EF043922A31D978009C9C18 /* Color+Extension.swift in Sources */,
 				4E4C031D2A2C87F4006F8138 /* AppDelegate.swift in Sources */,
+				3FB632272AC806460015AF8D /* DatePickerTableViewCell.swift in Sources */,
 				4E4C031F2A2C87F4006F8138 /* SceneDelegate.swift in Sources */,
+				3FB632152AC49CC60015AF8D /* MedicalInsertViewController.swift in Sources */,
 				4E3605A92A360D8100357C2A /* MedicalInformationViewController.swift in Sources */,
 				4EA026FA2A331AFA007C0D4F /* Text+Extension.swift in Sources */,
+				3FB632232AC806030015AF8D /* TextViewTableViewCell.swift in Sources */,
+				3FB6322B2AC808A20015AF8D /* MedicalTypeTableViewCell.swift in Sources */,
+				3FB6321A2AC563210015AF8D /* MedicalTableViewCell.swift in Sources */,
 				4EA026FD2A3336DF007C0D4F /* PersonalInformationViewController.swift in Sources */,
 				4EF0438D2A31B5F1009C9C18 /* Alert.swift in Sources */,
 				4EF043942A32175F009C9C18 /* AlphaBackgroundView.swift in Sources */,
@@ -401,6 +472,7 @@
 				3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */,
 				4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */,
 				4EF0438F2A31D575009C9C18 /* BaseViewController.swift in Sources */,
+				3FB6321F2AC805F20015AF8D /* TextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

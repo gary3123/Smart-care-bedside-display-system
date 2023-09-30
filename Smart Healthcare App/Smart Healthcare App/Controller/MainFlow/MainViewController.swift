@@ -69,7 +69,8 @@ class MainViewController: BaseViewController {
     }
     
     @objc func clickAddRecordBarButtonItem() {
-        
+        let nextVC = MedicalInsertViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     

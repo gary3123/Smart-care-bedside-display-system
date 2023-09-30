@@ -24,8 +24,8 @@
                     <rect key="frame" x="0.0" y="122.66666666666669" width="375" height="655.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-tm-iSX">
-                    <rect key="frame" x="-116.33333333333333" y="50.000000000000007" width="375" height="72.666666666666686"/>
+                <datePicker contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-tm-iSX">
+                    <rect key="frame" x="93.666666666666671" y="50.000000000000007" width="187.66666666666663" height="72.666666666666686"/>
                     <color key="tintColor" systemColor="tintColor"/>
                     <locale key="locale" localeIdentifier="zh_TW"/>
                 </datePicker>
@@ -35,12 +35,12 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fus-pS-9k5" secondAttribute="bottom" id="02K-RO-IXp"/>
                 <constraint firstItem="fqR-tm-iSX" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.1" id="Dhi-e7-F6G"/>
-                <constraint firstItem="fqR-tm-iSX" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="VEo-X8-TCZ"/>
+                <constraint firstItem="fqR-tm-iSX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RFy-q0-zfh"/>
+                <constraint firstItem="fqR-tm-iSX" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="VEo-X8-TCZ"/>
                 <constraint firstItem="Fus-pS-9k5" firstAttribute="top" secondItem="fqR-tm-iSX" secondAttribute="bottom" id="eKC-2V-v8z"/>
                 <constraint firstItem="Fus-pS-9k5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="l1F-cq-FOe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fus-pS-9k5" secondAttribute="trailing" id="pmt-rm-cco"/>
                 <constraint firstItem="fqR-tm-iSX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qIv-3Q-LxA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fqR-tm-iSX" secondAttribute="trailing" multiplier="1.45" id="yt9-N2-O7W"/>
             </constraints>
             <point key="canvasLocation" x="116.92307692307692" y="19.90521327014218"/>
         </view>

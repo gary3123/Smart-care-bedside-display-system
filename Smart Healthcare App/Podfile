@@ -7,5 +7,17 @@ target 'Smart care bedside display system' do
 
   # Pods for Smart Healthcare App
     pod 'lottie-ios' , '4.2.0'
+    pod 'CCAutocomplete' , '0.0.6'
+    pod 'IQKeyboardManager' , '6.5.12'
 
+end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+        end
+    end
 end
