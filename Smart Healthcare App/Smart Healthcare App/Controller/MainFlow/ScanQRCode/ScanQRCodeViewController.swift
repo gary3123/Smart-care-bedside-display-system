@@ -173,6 +173,7 @@ class ScanQRCodeViewController: BaseViewController {
 extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        print(output)
         self.navigationController?.popViewController(animated: true)
         self.captureSession.stopRunning()
     }

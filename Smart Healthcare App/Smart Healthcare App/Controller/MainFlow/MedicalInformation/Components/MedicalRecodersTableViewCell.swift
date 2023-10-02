@@ -11,6 +11,11 @@ class MedicalRecodersTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     
+    @IBOutlet weak var lbTime: UILabel!
+    @IBOutlet weak var lbDrugName: UILabel!
+    @IBOutlet weak var lbDrugClass: UILabel!
+    @IBOutlet weak var txvNote: UITextView!
+    
     // MARK: - Variables
     
     static let identified = "MedicalRecodersTableViewCell"

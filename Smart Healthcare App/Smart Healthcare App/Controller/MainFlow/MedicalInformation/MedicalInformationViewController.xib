@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalInformationViewController" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
             <connections>
-                <outlet property="datePicker" destination="fqR-tm-iSX" id="89u-kH-48z"/>
+                <outlet property="dpkTimeRecords" destination="fqR-tm-iSX" id="89u-kH-48z"/>
+                <outlet property="tbvMedicalRecords" destination="Fus-pS-9k5" id="Gqk-AA-XLn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

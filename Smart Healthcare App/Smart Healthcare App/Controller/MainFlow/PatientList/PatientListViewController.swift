@@ -7,6 +7,7 @@
 
 import UIKit
 import ProgressHUD
+import RealmSwift
 
 class PatientListViewController: UIViewController {
     
@@ -19,6 +20,8 @@ class PatientListViewController: UIViewController {
     
     var scanQrCodeBarButtonItem = UIBarButtonItem()
     let manager = NetworkManager()
+    let realm = try! Realm()
+    var patientList: [PatientsStruct]? = []
     
     // MARK: - LifeCycle
     
@@ -71,6 +74,21 @@ class PatientListViewController: UIViewController {
         navigationItem.backButtonTitle = ""
     }
     
+    func fetchRealmItem() {
+        patientList = []
+        let fetchToRealm = realm.objects(PatientsRealmModel.self)
+        for patient in fetchToRealm {
+            let item = PatientsStruct(id: patient._id,
+                                      medicalRecordID: patient.medicalRecordID,
+                                      name: patient.name,
+                                      medicalRecordNumber: patient.medicalRecordNumber,
+                                      wardNumber: patient.wardNumber,
+                                      bedNumber: patient.bedNumber)
+            patientList?.append(item)
+        }
+        print("\(realm.configuration.fileURL)")
+    }
+    
     // MARK: - CallPatientInfoApi
     
     func callpatientInfoApi() {
@@ -81,15 +99,15 @@ class PatientListViewController: UIViewController {
                 let result: GeneralResponse<PatientInfoResponse> = try await manager.requestData(method: .post,
                                                                                 path: .patientInfo,
                                                                                 parameters: request)
-                var name = result.data?.name
-                var gender = result.data?.gender
-                var medicalRecordNumber = result.data?.medicalRecordNumber
-                var wardNumber = result.data?.wardNumber
-                var birthday = result.data?.birthday
-                var bedNumber = result.data?.bedNumber
-                var medication = result.data?.medication
-                var notice = result.data?.notice
-                var cases = result.data?.cases
+                let name = result.data?.name
+                let gender = result.data?.gender
+                let medicalRecordNumber = result.data?.medicalRecordNumber
+                let wardNumber = result.data?.wardNumber
+                let birthday = result.data?.birthday
+                let bedNumber = result.data?.bedNumber
+                let medication = result.data?.medication
+                let notice = result.data?.notice
+                let cases = result.data?.cases
                
                 let nextVC = MainViewController()
                 SingletonOfPatient.shared.name = name!
