@@ -10,16 +10,19 @@ import UIKit
 class MedicalInformationViewController: UIViewController {
     
     // MARK: - IBOutlet
+    
     @IBOutlet weak var datePicker: UIDatePicker?
     
     // MARK: - Variables
-    var addRecordBarButtonItem = UIBarButtonItem()
+    
+    let manager = NetworkManager()
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        callGetMedicalRecordsApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +51,20 @@ class MedicalInformationViewController: UIViewController {
         
     }
     
-    @objc func clickAddRecordBarButtonItem() {
-        
+    // MARK: - CallGetMedicalRecordsAPI
+    
+    func callGetMedicalRecordsApi() {
+        let request: GetMedicalRecordsRequest = GetMedicalRecordsRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber, medicalRecordID: 1, date: "2023-10-01")
+        Task {
+            do {
+                let result: GeneralResponse<[GetMedicalRecordsResponse]> = try await manager.requestData(method: .post,
+                                                           path: .getMedicalRecord,
+                                                           parameters: request)
+                print(result)
+            } catch {
+                print(error)
+            }
+        }
     }
     
     // MARK: - IBAction

@@ -25,6 +25,22 @@
 		3FB6322B2AC808A20015AF8D /* MedicalTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */; };
 		3FB6322C2AC808A20015AF8D /* MedicalTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */; };
 		3FB6322F2AC88DF30015AF8D /* RVS_AutofillTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB6322E2AC88DF30015AF8D /* RVS_AutofillTextField */; };
+		3FB633112ACA8D310015AF8D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB633102ACA8D310015AF8D /* NetworkManager.swift */; };
+		3FB633132ACA8D430015AF8D /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB633122ACA8D430015AF8D /* NetworkConstants.swift */; };
+		3FB633152ACA8DBA0015AF8D /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB633142ACA8DBA0015AF8D /* Encodable+Extension.swift */; };
+		3FB633172ACA8E8D0015AF8D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB633162ACA8E8D0015AF8D /* LoginRequest.swift */; };
+		3FB633192ACA8ECA0015AF8D /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB633182ACA8ECA0015AF8D /* GeneralResponse.swift */; };
+		3FB6331B2ACA95B70015AF8D /* PatientInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6331A2ACA95B70015AF8D /* PatientInfoRequest.swift */; };
+		3FB633912ACAA9050015AF8D /* Medication.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FB633902ACAA9050015AF8D /* Medication.json */; };
+		3FB634092ACAD7A40015AF8D /* SingletonOfPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB634082ACAD7A30015AF8D /* SingletonOfPatient.swift */; };
+		3FB6340C2ACAE0E70015AF8D /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6340A2ACAE0E70015AF8D /* MedicationTableViewCell.swift */; };
+		3FB6340D2ACAE0E70015AF8D /* MedicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6340B2ACAE0E70015AF8D /* MedicationTableViewCell.xib */; };
+		3FB634142ACAE6E70015AF8D /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB634122ACAE6E70015AF8D /* NoticeTableViewCell.swift */; };
+		3FB634152ACAE6E70015AF8D /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB634132ACAE6E70015AF8D /* NoticeTableViewCell.xib */; };
+		3FB634172ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB634162ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift */; };
+		3FB6341B2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB634192ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift */; };
+		3FB6341C2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6341A2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib */; };
+		3FF288D32ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -71,6 +87,22 @@
 		3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
 		3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTypeTableViewCell.swift; sourceTree = "<group>"; };
 		3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalTypeTableViewCell.xib; sourceTree = "<group>"; };
+		3FB633102ACA8D310015AF8D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3FB633122ACA8D430015AF8D /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		3FB633142ACA8DBA0015AF8D /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		3FB633162ACA8E8D0015AF8D /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		3FB633182ACA8ECA0015AF8D /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		3FB6331A2ACA95B70015AF8D /* PatientInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoRequest.swift; sourceTree = "<group>"; };
+		3FB633902ACAA9050015AF8D /* Medication.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Medication.json; sourceTree = "<group>"; };
+		3FB634082ACAD7A30015AF8D /* SingletonOfPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonOfPatient.swift; sourceTree = "<group>"; };
+		3FB6340A2ACAE0E70015AF8D /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
+		3FB6340B2ACAE0E70015AF8D /* MedicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicationTableViewCell.xib; sourceTree = "<group>"; };
+		3FB634122ACAE6E70015AF8D /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
+		3FB634132ACAE6E70015AF8D /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
+		3FB634162ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMedicalRecordRequest.swift; sourceTree = "<group>"; };
+		3FB634192ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecodersTableViewCell.swift; sourceTree = "<group>"; };
+		3FB6341A2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecodersTableViewCell.xib; sourceTree = "<group>"; };
+		3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMedicalRecordsRequest.swift; sourceTree = "<group>"; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
@@ -121,6 +153,7 @@
 			children = (
 				4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */,
 				3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */,
+				3FB633902ACAA9050015AF8D /* Medication.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -138,6 +171,7 @@
 		3F0247962ABF4B5E006EA177 /* MedicalInformation */ = {
 			isa = PBXGroup;
 			children = (
+				3FB634182ACAF7680015AF8D /* Components */,
 				3FB632122AC49CA20015AF8D /* MedicalInsert */,
 				4E3605A72A360D8100357C2A /* MedicalInformationViewController.swift */,
 				4E3605A82A360D8100357C2A /* MedicalInformationViewController.xib */,
@@ -188,6 +222,10 @@
 			children = (
 				3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */,
 				3FB632192AC563210015AF8D /* MedicalTableViewCell.xib */,
+				3FB6340A2ACAE0E70015AF8D /* MedicationTableViewCell.swift */,
+				3FB6340B2ACAE0E70015AF8D /* MedicationTableViewCell.xib */,
+				3FB634122ACAE6E70015AF8D /* NoticeTableViewCell.swift */,
+				3FB634132ACAE6E70015AF8D /* NoticeTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -203,6 +241,38 @@
 				3FB632262AC806460015AF8D /* DatePickerTableViewCell.xib */,
 				3FB632292AC808A20015AF8D /* MedicalTypeTableViewCell.swift */,
 				3FB6322A2AC808A20015AF8D /* MedicalTypeTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3FB6330E2ACA8D0E0015AF8D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3FB6330F2ACA8D190015AF8D /* API */,
+				3FB633102ACA8D310015AF8D /* NetworkManager.swift */,
+				3FB633122ACA8D430015AF8D /* NetworkConstants.swift */,
+				3FB634082ACAD7A30015AF8D /* SingletonOfPatient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3FB6330F2ACA8D190015AF8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3FB633162ACA8E8D0015AF8D /* LoginRequest.swift */,
+				3FB633182ACA8ECA0015AF8D /* GeneralResponse.swift */,
+				3FB6331A2ACA95B70015AF8D /* PatientInfoRequest.swift */,
+				3FB634162ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift */,
+				3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3FB634182ACAF7680015AF8D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3FB634192ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift */,
+				3FB6341A2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -255,6 +325,7 @@
 		4E4C03382A2C8A2D006F8138 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6330E2ACA8D0E0015AF8D /* Network */,
 				4EF043902A31D963009C9C18 /* Extension */,
 				4EF0438C2A31B5F1009C9C18 /* Alert.swift */,
 			);
@@ -299,6 +370,7 @@
 			children = (
 				4EF043912A31D978009C9C18 /* Color+Extension.swift */,
 				4EA026F92A331AFA007C0D4F /* Text+Extension.swift */,
+				3FB633142ACA8DBA0015AF8D /* Encodable+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,15 +468,19 @@
 				4E4C03262A2C87F5006F8138 /* Assets.xcassets in Resources */,
 				3FB6321B2AC563210015AF8D /* MedicalTableViewCell.xib in Resources */,
 				3FB6322C2AC808A20015AF8D /* MedicalTypeTableViewCell.xib in Resources */,
+				3FB6340D2ACAE0E70015AF8D /* MedicationTableViewCell.xib in Resources */,
 				4E4C03372A2C89FD006F8138 /* Login.xib in Resources */,
 				3FB632202AC805F20015AF8D /* TextFieldTableViewCell.xib in Resources */,
 				4EF043172A31B195009C9C18 /* ScanQRCodeViewController.xib in Resources */,
+				3FB6341C2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib in Resources */,
 				4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */,
 				4EA026FE2A3336DF007C0D4F /* PersonalInformationViewController.xib in Resources */,
 				3FB632242AC806030015AF8D /* TextViewTableViewCell.xib in Resources */,
 				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
+				3FB633912ACAA9050015AF8D /* Medication.json in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
+				3FB634152ACAE6E70015AF8D /* NoticeTableViewCell.xib in Resources */,
 				3F0247942ABF4B3D006EA177 /* PatientListViewController.xib in Resources */,
 				3F02471C2ABCBA62006EA177 /* DotBackgroundAnimate.json in Resources */,
 			);
@@ -459,6 +535,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB633132ACA8D430015AF8D /* NetworkConstants.swift in Sources */,
+				3FB633172ACA8E8D0015AF8D /* LoginRequest.swift in Sources */,
+				3FB633112ACA8D310015AF8D /* NetworkManager.swift in Sources */,
+				3FB634092ACAD7A40015AF8D /* SingletonOfPatient.swift in Sources */,
+				3FB6340C2ACAE0E70015AF8D /* MedicationTableViewCell.swift in Sources */,
 				4E4C03362A2C89FC006F8138 /* Login.swift in Sources */,
 				4EA027022A3337A1007C0D4F /* MainViewController.swift in Sources */,
 				3F0247932ABF4B3D006EA177 /* PatientListViewController.swift in Sources */,
@@ -468,6 +549,7 @@
 				4E4C031F2A2C87F4006F8138 /* SceneDelegate.swift in Sources */,
 				3FB632152AC49CC60015AF8D /* MedicalInsertViewController.swift in Sources */,
 				4E3605A92A360D8100357C2A /* MedicalInformationViewController.swift in Sources */,
+				3FB634172ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift in Sources */,
 				4EA026FA2A331AFA007C0D4F /* Text+Extension.swift in Sources */,
 				3FB632232AC806030015AF8D /* TextViewTableViewCell.swift in Sources */,
 				3FB6322B2AC808A20015AF8D /* MedicalTypeTableViewCell.swift in Sources */,
@@ -475,12 +557,18 @@
 				4EA026FD2A3336DF007C0D4F /* PersonalInformationViewController.swift in Sources */,
 				4EF0438D2A31B5F1009C9C18 /* Alert.swift in Sources */,
 				4EF043942A32175F009C9C18 /* AlphaBackgroundView.swift in Sources */,
+				3FB633192ACA8ECA0015AF8D /* GeneralResponse.swift in Sources */,
+				3FB633152ACA8DBA0015AF8D /* Encodable+Extension.swift in Sources */,
 				4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */,
 				4EF043162A31B195009C9C18 /* ScanQRCodeViewController.swift in Sources */,
 				3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */,
 				4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */,
+				3FB634142ACAE6E70015AF8D /* NoticeTableViewCell.swift in Sources */,
+				3FF288D32ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift in Sources */,
+				3FB6331B2ACA95B70015AF8D /* PatientInfoRequest.swift in Sources */,
 				4EF0438F2A31D575009C9C18 /* BaseViewController.swift in Sources */,
 				3FB6321F2AC805F20015AF8D /* TextFieldTableViewCell.swift in Sources */,
+				3FB6341B2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

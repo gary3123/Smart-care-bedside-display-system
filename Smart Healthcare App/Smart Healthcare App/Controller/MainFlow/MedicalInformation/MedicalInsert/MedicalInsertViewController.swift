@@ -15,28 +15,23 @@ class MedicalInsertViewController: UIViewController {
     @IBOutlet weak var btnSave: UIButton!
     
     // MARK: - Variables
-    let drugNames = [
-        "SILICEA",
-        "Naproxen",
-        "Moisturizing Antibacterial",
-        "Quick Action",
-        "Cuprum aceticum Nicotiana",
-        "Mekinist",
-        "Glimepiride",
-        "Methocarbamol",
-        "anti itch",
-        "NP Thyroid 120",
-        "ChloraPrep One-Step",
-        "Rescue Sleep",
-        "Pain Reliever Extra Strength",
-        "Tussin CF Non Drowsy Multi Symptom"
-    ]
+    var drugNames: [String] = []
+    var medicalTypeInt: [Int] = []
     
-    let medicalTypeTitle = ["注射", "口服"]
-    let medicalType = ["Injection", "oral"]
+    var result: [Medications]? = nil
+    let medicalTypeTitle = ["注射", "口服", "外用", "其他"]
     var selectMedicalTypeIndex: Int? = nil
-    
     var selectDrugName: String = ""
+    var note = ""
+    var selectTime = ""
+    let formatter = DateFormatter()
+    let dateFormat = "yyyy/MM/dd HH:mm"
+    let manager = NetworkManager()
+    
+    struct Medications: Decodable {
+        public var name: String
+        public var drug_class: Int
+    }
     
     // MARK: - LifeCycle
     
@@ -44,6 +39,7 @@ class MedicalInsertViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Medical Record Insert"
         setupUI()
+        loadJson(filename: "Medication")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,10 +78,63 @@ class MedicalInsertViewController: UIViewController {
         btnSave.layer.cornerRadius = 30
     }
     
+    func loadJson(filename fileName: String) {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData: [Medications] = try decoder.decode([Medications].self, from: data)
+                
+                jsonData.forEach { medication in
+                    drugNames.append(medication.name)
+                    medicalTypeInt.append(medication.drug_class)
+                }
+            } catch {
+                print("error:\(error)")
+            }
+        }
+    }
+    
+    // MARK: - CallUploadMedicalRecordAPI
+    
+    func callUploadMedicalRecordApi() {
+        if selectTime.isEmpty {
+            formatter.locale = Locale.init(identifier: "zh_CN")
+            formatter.dateFormat = dateFormat
+            selectTime = formatter.string(from: Date())
+        }
+        let request: UploadMedicalRecordRequest = UploadMedicalRecordRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber,
+                                                                             medicalRecordID: 1,
+                                                                             medication: selectDrugName,
+                                                                             drugClass: selectMedicalTypeIndex!,
+                                                                             time: selectTime,
+                                                                             notice: note)
+        Task {
+            do {
+                let result: GeneralResponse<String> = try await manager.requestData(method: .post,
+                                                                                    path: .uploadMedicalRecord,
+                                                                                    parameters: request)
+                if result.result == 0 {
+                    navigationController?.popViewController(animated: true)
+                } else {
+                    Alert.showAlert(title: "上傳失敗", message: "請確認網路連線狀況", vc: self, confirmTitle: "確認")
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    @objc func datePickerChangedValue(_ sender: UIDatePicker) {
+        formatter.locale = Locale.init(identifier: "zh_CN")
+        formatter.dateFormat = dateFormat
+        selectTime = formatter.string(from: sender.date)
+    }
+    
     // MARK: - IBAction
     
     @IBAction func clickBtnSave() {
-        self.navigationController?.popViewController(animated: true)
+        callUploadMedicalRecordApi()
     }
     
 }
@@ -114,9 +163,11 @@ extension MedicalInsertViewController: UITableViewDelegate, UITableViewDataSourc
             return cell
         case 2:
             let cell = tbvMedicalInsert.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.identified, for: indexPath) as! DatePickerTableViewCell
+            cell.dpkTakingTime.addTarget(self, action: #selector(datePickerChangedValue), for: .valueChanged)
             return cell
         default:
             let cell = tbvMedicalInsert.dequeueReusableCell(withIdentifier: TextViewTableViewCell.identified, for: indexPath) as! TextViewTableViewCell
+            cell.txvNote.delegate = self
             return cell
         }
     }
@@ -138,6 +189,12 @@ extension MedicalInsertViewController: UITableViewDelegate, UITableViewDataSourc
 extension MedicalInsertViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         selectDrugName = textField.text!
+    }
+}
+
+extension MedicalInsertViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        note = textView.text
     }
 }
 

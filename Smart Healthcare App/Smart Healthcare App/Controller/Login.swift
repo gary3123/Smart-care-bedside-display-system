@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class Login: BaseViewController {
     // MARK: - IBOutlet
@@ -15,6 +16,7 @@ class Login: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField?
     
     // MARK: - Variables
+    let manager = NetworkManager()
     
     
     // MARK: - LifeCycle
@@ -83,12 +85,38 @@ class Login: BaseViewController {
         
     }
     
+    // MARK: - CallLoginAPI
+    
+    func callLoginApi() {
+        let request: LoginRequest = LoginRequest(account: (accountTextField?.text)!,
+                                                 password: (passwordTextField?.text)!)
+        ProgressHUD.colorAnimation = .ThemeColor!
+        ProgressHUD.animationType = .systemActivityIndicator
+        ProgressHUD.show()
+        Task {
+            do {
+                let result: GeneralResponse<String> = try await manager.requestData(method: .post,
+                                                                                    path: .login,
+                                                                                    parameters: request)
+                if result.result == 0 {
+                    print("登入成功")
+                    let nextVC = PatientListViewController()
+                    navigationController?.pushViewController(nextVC, animated: true)
+                } else {
+                    print("登入失敗")
+                    ProgressHUD.dismiss()
+                    Alert.showAlert(title: "登入失敗", message: "帳號或密碼錯誤", vc: self, confirmTitle: "確認")
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
     
     // MARK: - IBAction
     
     @IBAction func clickLogin() {
-        let nextVC = PatientListViewController()
-        navigationController?.pushViewController(nextVC, animated: true)
+        callLoginApi()
     }
     
 }

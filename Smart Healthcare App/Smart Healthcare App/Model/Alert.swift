@@ -8,6 +8,24 @@
 import UIKit
 
 public class Alert{
+    
+    static func showAlert(title: String,
+                   message: String,
+                   vc: UIViewController,
+                   confirmTitle: String,
+                   confirmAction: (() -> Void)? = nil) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle: .alert)
+            let confirm = UIAlertAction(title: confirmTitle, style: .default) { action in
+                confirmAction?()
+            }
+            alertController.addAction(confirm)
+            vc.present(alertController, animated: true)
+        }
+    }
+    
     static func showAlert(title: String,
                    message: String,
                    vc: UIViewController,

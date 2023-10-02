@@ -10,33 +10,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MedicalTableViewCell" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NoticeTableViewCell" customModule="Smart_care_bedside_display_system" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5D-a6-sl3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-lt-4WV">
                         <rect key="frame" x="16" y="11.666666666666664" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="W5D-a6-sl3" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="4xH-iT-OPl"/>
-                    <constraint firstItem="W5D-a6-sl3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Egs-M7-rOK"/>
-                    <constraint firstItem="W5D-a6-sl3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="eR0-Fq-KEt"/>
-                    <constraint firstItem="W5D-a6-sl3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eYu-C9-VBt"/>
+                    <constraint firstItem="aZm-lt-4WV" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="3tP-Jo-srC"/>
+                    <constraint firstItem="aZm-lt-4WV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="d01-uO-nnp"/>
+                    <constraint firstItem="aZm-lt-4WV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mZv-YP-f9c"/>
+                    <constraint firstItem="aZm-lt-4WV" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="u6z-u0-hND"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="lbTitle" destination="W5D-a6-sl3" id="AqT-a6-YCA"/>
+                <outlet property="lbTitle" destination="aZm-lt-4WV" id="qh7-SJ-DcW"/>
             </connections>
-            <point key="canvasLocation" x="31" y="21"/>
+            <point key="canvasLocation" x="6" y="21"/>
         </tableViewCell>
     </objects>
 </document>

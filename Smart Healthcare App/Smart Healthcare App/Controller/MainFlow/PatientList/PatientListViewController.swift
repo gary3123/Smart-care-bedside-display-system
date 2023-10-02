@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class PatientListViewController: UIViewController {
     
     // MARK: - IBOutlet
+    
     @IBOutlet weak var tvPatientList: UITableView?
     @IBOutlet weak var btnSignOut: UIButton?
     
     // MARK: - Variables
+    
     var scanQrCodeBarButtonItem = UIBarButtonItem()
+    let manager = NetworkManager()
     
     // MARK: - LifeCycle
     
@@ -26,7 +30,7 @@ class PatientListViewController: UIViewController {
         setupUI()
         setupTableView()
         setupNavigation()
-       
+        ProgressHUD.showSucceed()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +71,44 @@ class PatientListViewController: UIViewController {
         navigationItem.backButtonTitle = ""
     }
     
+    // MARK: - CallPatientInfoApi
+    
+    func callpatientInfoApi() {
+        let request: PatientInfoRequest = PatientInfoRequest(medicalRecordNumber: "P-00000001",
+                                                             medicalRecordId: 1)
+        Task {
+            do {
+                let result: GeneralResponse<PatientInfoResponse> = try await manager.requestData(method: .post,
+                                                                                path: .patientInfo,
+                                                                                parameters: request)
+                var name = result.data?.name
+                var gender = result.data?.gender
+                var medicalRecordNumber = result.data?.medicalRecordNumber
+                var wardNumber = result.data?.wardNumber
+                var birthday = result.data?.birthday
+                var bedNumber = result.data?.bedNumber
+                var medication = result.data?.medication
+                var notice = result.data?.notice
+                var cases = result.data?.cases
+               
+                let nextVC = MainViewController()
+                SingletonOfPatient.shared.name = name!
+                SingletonOfPatient.shared.gender = gender!
+                SingletonOfPatient.shared.medicalRecordNumber = medicalRecordNumber!
+                SingletonOfPatient.shared.wardNumber = wardNumber!
+                SingletonOfPatient.shared.birthday = birthday!
+                SingletonOfPatient.shared.bedNumber = bedNumber!
+                SingletonOfPatient.shared.medication = medication!
+                SingletonOfPatient.shared.notice = notice!
+                SingletonOfPatient.shared.cases = cases!
+                navigationController?.pushViewController(nextVC, animated: true)
+            } catch {
+                print(error)
+            }
+            
+        }
+    }
+    
     // MARK: - IBAction
     
     @objc func clickScanQRcode() {
@@ -98,8 +140,7 @@ extension PatientListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextVC = MainViewController()
-        navigationController?.pushViewController(nextVC, animated: true)
+       callpatientInfoApi()
     }
     
 }

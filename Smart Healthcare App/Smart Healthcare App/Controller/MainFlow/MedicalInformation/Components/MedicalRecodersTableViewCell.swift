@@ -1,20 +1,19 @@
 //
-//  MedicalTableViewCell.swift
+//  MedicalRecodersTableViewCell.swift
 //  Smart care bedside display system
 //
-//  Created by imac-3570 on 2023/9/28.
+//  Created by imac-3570 on 2023/10/2.
 //
 
 import UIKit
 
-class MedicalTableViewCell: UITableViewCell {
+class MedicalRecodersTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
-    @IBOutlet weak var lbTitle: UILabel!
     
     // MARK: - Variables
     
-    static let identified = "MedicalTableViewCell"
+    static let identified = "MedicalRecodersTableViewCell"
     
     
     // MARK: - LifeCycle
