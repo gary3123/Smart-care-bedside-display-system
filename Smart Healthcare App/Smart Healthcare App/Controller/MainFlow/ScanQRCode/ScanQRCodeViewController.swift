@@ -7,19 +7,34 @@
 
 import UIKit
 import AVFoundation
+import RealmSwift
+import ProgressHUD
+import CryptoSwift
 
 class ScanQRCodeViewController: BaseViewController {
     // MARK: - IBOutlet
+    
     @IBOutlet weak var cameraFrame: UIView?
     
     // MARK: - Variables
+    
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var scanQRcodePath = UIBezierPath()
     var blackBackgroundView = UIView()
     var lineView = UIView()
+    let manager = NetworkManager()
+    let realm = try! Realm()
+    let patientItem: PatientsStruct? = nil
+    var patientID: PatientID? = nil
+    
+    struct PatientID: Decodable {
+        var number: String
+        var id: String
+    }
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraPrivacy()
@@ -27,6 +42,7 @@ class ScanQRCodeViewController: BaseViewController {
     }
     
     // MARK: - Setup
+    
     func setup() {
         self.title = "Scan QR Code"
     }
@@ -165,6 +181,54 @@ class ScanQRCodeViewController: BaseViewController {
         }
     }
     
+    func callScanQRCodeApi(medicalRecordNumber: String,
+                           medicalRecordID: Int) {
+        let request: ScanQRCodeRequest = ScanQRCodeRequest(medicalRecordNumber: medicalRecordNumber,
+                                                           medicalRecordID: medicalRecordID)
+        Task {
+            do {
+                let result: GeneralResponse<ScanQRCodeResponse> = try await manager.requestData(method: .post,
+                                                                                                  path: .scanQRCode,
+                                                                                                  parameters: request)
+                if result.result == 0 {
+                    let saveToPatientList = PatientsRealmModel(medicalRecordID: result.data!.medicalRecordID,
+                                                               name: result.data!.name,
+                                                               medicalRecordNumber: result.data!.medicalRecordNumber,
+                                                               wardNumber: result.data!.wardNumber,
+                                                               bedNumber: result.data!.bedNumber)
+                    try! realm.write({
+                        realm.add(saveToPatientList)
+                    })
+                    ProgressHUD.dismiss()
+                    NotificationCenter.default.post(name: .reloadPatientsTableView, object: nil)
+                    self.navigationController?.popViewController(animated: true)
+                } else {
+                    ProgressHUD.dismiss()
+                    Alert.showAlert(title: "錯誤的 QRcode",
+                                    message: "請掃描正確的 QRcode",
+                                    vc: self,
+                                    confirmTitle: "確認") {
+                        self.captureSession.startRunning()
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func loadJson(filename fileName: Data) {
+        do {
+            let decoder = JSONDecoder()
+            let jsonData: PatientID = try decoder.decode(PatientID.self, from: fileName)
+
+            patientID = jsonData
+            print(patientID?.id)
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    
     // MARK: - IBAction
     
 
@@ -173,8 +237,56 @@ class ScanQRCodeViewController: BaseViewController {
 extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        print(output)
-        self.navigationController?.popViewController(animated: true)
         self.captureSession.stopRunning()
+        if let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
+            if metadataObj.type == AVMetadataObject.ObjectType.qr {
+//                let splitStr = metadataObj.stringValue?.split(separator: "==")
+//                let encIv = splitStr![0] + "=="
+//                let encrypeStr = String(splitStr![1])
+//                let iv = encIv.data(using: .utf8)
+//                let ivStr = iv?.base64EncodedString()
+                let iv = metadataObj.stringValue?.prefix(16)
+                let encrypeStr = metadataObj.stringValue?.split(separator: iv!)
+                let str = encrypeStr![0]
+                
+                var decypeStr = str.description.aesDecrypt(key: "imacGetTopRewardimacGetTopReward", iv: iv!.description)
+                decypeStr!.replace("\r", with: "")
+               
+                // 將字符串轉換為 JSON 數據
+                let jsonData = decypeStr!.data(using: .utf8)!
+
+                // 創建 JSON 解碼器
+                let decoder = JSONDecoder()
+
+                // 解碼 JSON 數據
+                do {
+                    let json = try decoder.decode([String: String].self, from: jsonData)
+
+                    // 取 number
+                    let number = json["number"]
+
+                    // 取 id
+                    let id = json["id"]
+
+                    // 輸出 number 和 id
+                    print(number) // "P-12537846"
+                    print(id) // "6"
+                    
+                    callScanQRCodeApi(medicalRecordNumber: number!, medicalRecordID: Int(id!)!)
+                } catch {
+                    // 處理錯誤
+                    print(error)
+                    Alert.showAlert(title: "錯誤的 QRcode",
+                                    message: "請掃描正確的 QRcode",
+                                    vc: self,
+                                    confirmTitle: "確認") {
+                        DispatchQueue.global(qos: .background).async {
+                            self.captureSession.startRunning()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+

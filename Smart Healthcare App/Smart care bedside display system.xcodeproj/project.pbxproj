@@ -42,6 +42,13 @@
 		3FB6341C2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6341A2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib */; };
 		3FF288D32ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */; };
 		3FF288D62ACB4B8600EBFACB /* PatientsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF288D52ACB4B8600EBFACB /* PatientsRealmModel.swift */; };
+		3FF288D82ACBE25700EBFACB /* ScanQRCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF288D72ACBE25700EBFACB /* ScanQRCodeRequest.swift */; };
+		3FF288DA2ACBF3B500EBFACB /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF288D92ACBF3B500EBFACB /* NSNotification+Extension.swift */; };
+		3FF289692AD00D7D00EBFACB /* server.cer in Resources */ = {isa = PBXBuildFile; fileRef = 3FF289682AD00D7D00EBFACB /* server.cer */; };
+		3FF2896E2AD02EBF00EBFACB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2896D2AD02EBF00EBFACB /* String+Extension.swift */; };
+		3FF289702AD035C100EBFACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FF2896F2AD035C000EBFACB /* GoogleService-Info.plist */; };
+		3FF289732AD0362800EBFACB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF289722AD0362800EBFACB /* FirebaseAnalytics */; };
+		3FF289752AD0362900EBFACB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF289742AD0362900EBFACB /* FirebaseMessaging */; };
 		4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E36059F2A3604B800357C2A /* CustomTabBarView.swift */; };
 		4E3605A22A3604CC00357C2A /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */; };
 		4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3605A32A3605CB00357C2A /* ImageButtonView.swift */; };
@@ -105,6 +112,12 @@
 		3FB6341A2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecodersTableViewCell.xib; sourceTree = "<group>"; };
 		3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMedicalRecordsRequest.swift; sourceTree = "<group>"; };
 		3FF288D52ACB4B8600EBFACB /* PatientsRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsRealmModel.swift; sourceTree = "<group>"; };
+		3FF288D72ACBE25700EBFACB /* ScanQRCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeRequest.swift; sourceTree = "<group>"; };
+		3FF288D92ACBF3B500EBFACB /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
+		3FF289682AD00D7D00EBFACB /* server.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = server.cer; sourceTree = "<group>"; };
+		3FF2896D2AD02EBF00EBFACB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3FF2896F2AD035C000EBFACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FF289762AD03B5E00EBFACB /* Smart care bedside display system.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smart care bedside display system.entitlements"; sourceTree = "<group>"; };
 		4E36059F2A3604B800357C2A /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		4E3605A12A3604CC00357C2A /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		4E3605A32A3605CB00357C2A /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
@@ -142,8 +155,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF289752AD0362900EBFACB /* FirebaseMessaging in Frameworks */,
 				3FB6322F2AC88DF30015AF8D /* RVS_AutofillTextField in Frameworks */,
 				528EB58DE3DB8E81AA5E5644 /* Pods_Smart_care_bedside_display_system.framework in Frameworks */,
+				3FF289732AD0362800EBFACB /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,8 @@
 		3F02471A2ABCBA35006EA177 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3FF2896F2AD035C000EBFACB /* GoogleService-Info.plist */,
+				3FF289682AD00D7D00EBFACB /* server.cer */,
 				4E3605AD2A371F4D00357C2A /* Timeburner-xJB8.ttf */,
 				3F02471B2ABCBA62006EA177 /* DotBackgroundAnimate.json */,
 				3FB633902ACAA9050015AF8D /* Medication.json */,
@@ -266,6 +283,7 @@
 				3FB6331A2ACA95B70015AF8D /* PatientInfoRequest.swift */,
 				3FB634162ACAEB6E0015AF8D /* UploadMedicalRecordRequest.swift */,
 				3FF288D22ACAFEB200EBFACB /* GetMedicalRecordsRequest.swift */,
+				3FF288D72ACBE25700EBFACB /* ScanQRCodeRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -301,6 +319,7 @@
 		4E4C03102A2C87F4006F8138 = {
 			isa = PBXGroup;
 			children = (
+				3FF289762AD03B5E00EBFACB /* Smart care bedside display system.entitlements */,
 				4E4C031B2A2C87F4006F8138 /* Smart Healthcare App */,
 				4E4C031A2A2C87F4006F8138 /* Products */,
 				897D188EF799A6F7609AECC1 /* Pods */,
@@ -382,6 +401,8 @@
 				4EF043912A31D978009C9C18 /* Color+Extension.swift */,
 				4EA026F92A331AFA007C0D4F /* Text+Extension.swift */,
 				3FB633142ACA8DBA0015AF8D /* Encodable+Extension.swift */,
+				3FF288D92ACBF3B500EBFACB /* NSNotification+Extension.swift */,
+				3FF2896D2AD02EBF00EBFACB /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -425,6 +446,8 @@
 			name = "Smart care bedside display system";
 			packageProductDependencies = (
 				3FB6322E2AC88DF30015AF8D /* RVS_AutofillTextField */,
+				3FF289722AD0362800EBFACB /* FirebaseAnalytics */,
+				3FF289742AD0362900EBFACB /* FirebaseMessaging */,
 			);
 			productName = "Smart Healthcare App";
 			productReference = 4E4C03192A2C87F4006F8138 /* Smart care bedside display system.app */;
@@ -456,6 +479,7 @@
 			mainGroup = 4E4C03102A2C87F4006F8138;
 			packageReferences = (
 				3FB6322D2AC88DF30015AF8D /* XCRemoteSwiftPackageReference "RVS_AutofillTextField" */,
+				3FF289712AD0362800EBFACB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4E4C031A2A2C87F4006F8138 /* Products */;
 			projectDirPath = "";
@@ -473,6 +497,7 @@
 			files = (
 				4E4C03292A2C87F5006F8138 /* LaunchScreen.storyboard in Resources */,
 				3FB632282AC806460015AF8D /* DatePickerTableViewCell.xib in Resources */,
+				3FF289702AD035C100EBFACB /* GoogleService-Info.plist in Resources */,
 				4EA027032A3337A1007C0D4F /* MainViewController.xib in Resources */,
 				3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */,
 				3FB632162AC49CC60015AF8D /* MedicalInsertViewController.xib in Resources */,
@@ -488,6 +513,7 @@
 				4EA026FE2A3336DF007C0D4F /* PersonalInformationViewController.xib in Resources */,
 				3FB632242AC806030015AF8D /* TextViewTableViewCell.xib in Resources */,
 				4E3605AE2A371F4D00357C2A /* Timeburner-xJB8.ttf in Resources */,
+				3FF289692AD00D7D00EBFACB /* server.cer in Resources */,
 				4E3605A62A3605E700357C2A /* ImageButtonView.xib in Resources */,
 				3FB633912ACAA9050015AF8D /* Medication.json in Resources */,
 				4E3605AA2A360D8100357C2A /* MedicalInformationViewController.xib in Resources */,
@@ -568,11 +594,14 @@
 				3FB6321A2AC563210015AF8D /* MedicalTableViewCell.swift in Sources */,
 				4EA026FD2A3336DF007C0D4F /* PersonalInformationViewController.swift in Sources */,
 				4EF0438D2A31B5F1009C9C18 /* Alert.swift in Sources */,
+				3FF2896E2AD02EBF00EBFACB /* String+Extension.swift in Sources */,
+				3FF288D82ACBE25700EBFACB /* ScanQRCodeRequest.swift in Sources */,
 				4EF043942A32175F009C9C18 /* AlphaBackgroundView.swift in Sources */,
 				3FB633192ACA8ECA0015AF8D /* GeneralResponse.swift in Sources */,
 				3FB633152ACA8DBA0015AF8D /* Encodable+Extension.swift in Sources */,
 				4E3605A42A3605CB00357C2A /* ImageButtonView.swift in Sources */,
 				4EF043162A31B195009C9C18 /* ScanQRCodeViewController.swift in Sources */,
+				3FF288DA2ACBF3B500EBFACB /* NSNotification+Extension.swift in Sources */,
 				3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */,
 				4E3605A02A3604B800357C2A /* CustomTabBarView.swift in Sources */,
 				3FB634142ACAE6E70015AF8D /* NoticeTableViewCell.swift in Sources */,
@@ -718,6 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Smart care bedside display system.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S8FBP4YLUA;
@@ -748,6 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Smart care bedside display system.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S8FBP4YLUA;
@@ -804,6 +835,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		3FF289712AD0362800EBFACB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -811,6 +850,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3FB6322D2AC88DF30015AF8D /* XCRemoteSwiftPackageReference "RVS_AutofillTextField" */;
 			productName = RVS_AutofillTextField;
+		};
+		3FF289722AD0362800EBFACB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FF289712AD0362800EBFACB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3FF289742AD0362900EBFACB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FF289712AD0362800EBFACB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

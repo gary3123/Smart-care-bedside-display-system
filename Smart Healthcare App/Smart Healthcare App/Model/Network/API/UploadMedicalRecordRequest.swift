@@ -9,6 +9,7 @@ import Foundation
 
 public struct UploadMedicalRecordRequest: Encodable {
     public var medicalRecordNumber: String
+    public var ms_id: String
     public var medicalRecordID: Int
     public var medication: String
     public var drugClass: Int

@@ -11,6 +11,7 @@ target 'Smart care bedside display system' do
     pod 'IQKeyboardManager' , '6.5.12'
     pod 'ProgressHUD' , '13.7.2'
     pod 'RealmSwift' , '10.42.1'
+    pod 'CryptoSwift' , '1.8.0'
 
 end
 

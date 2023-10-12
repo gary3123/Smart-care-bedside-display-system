@@ -19,30 +19,43 @@ class MedicalInformationViewController: UIViewController {
     var medicalRecords: [GetMedicalRecordsResponse] = []
     let manager = NetworkManager()
     let drugClassString = ["注射", "口服", "外用", "其他"]
+    let formatter = DateFormatter()
+    let dateFormat = "yyyy/MM/dd HH:mm"
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        // 建立 Notification 接收者
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(callGetMedicalRecords),
+                                               name: .callGetMedicalRecords,
+                                               object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let formatter = DateFormatter()
+        let dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale.init(identifier: "zh_CN")
+        formatter.dateFormat = dateFormat
+        let date = formatter.string(from: Date())
+//        callGetMedicalRecordsApi(date: date)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
         let formatter = DateFormatter()
         let dateFormat = "yyyy-MM-dd"
         formatter.locale = Locale.init(identifier: "zh_CN")
         formatter.dateFormat = dateFormat
         let date = formatter.string(from: Date())
         callGetMedicalRecordsApi(date: date)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -76,10 +89,25 @@ class MedicalInformationViewController: UIViewController {
         callGetMedicalRecordsApi(date: date)
     }
     
+    @objc func callGetMedicalRecords() {
+        let formatter = DateFormatter()
+        let dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale.init(identifier: "zh_CN")
+        formatter.dateFormat = dateFormat
+        if formatter.string(from: dpkTimeRecords!.date) == formatter.string(from: Date()) {
+            let date = formatter.string(from: Date())
+            medicalRecords = []
+            callGetMedicalRecordsApi(date: date)
+        }
+        tbvMedicalRecords?.reloadData()
+    }
+    
     // MARK: - CallGetMedicalRecordsAPI
     
     func callGetMedicalRecordsApi(date: String) {
-        let request: GetMedicalRecordsRequest = GetMedicalRecordsRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber, medicalRecordID: 1, date: date)
+        let request: GetMedicalRecordsRequest = GetMedicalRecordsRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber,
+                                                                         medicalRecordID: SingletonOfPatient.shared.medicalRecordID,
+                                                                         date: date)
         medicalRecords = []
         Task {
             do {

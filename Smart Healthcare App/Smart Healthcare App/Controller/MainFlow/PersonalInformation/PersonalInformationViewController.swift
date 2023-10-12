@@ -45,7 +45,11 @@ class PersonalInformationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("PersonalInformationViewController")
         lbName?.text = "姓名：\(SingletonOfPatient.shared.name)"
-        lbGender?.text = "性別：\(SingletonOfPatient.shared.gender)"
+        if SingletonOfPatient.shared.gender == 1 {
+            lbGender?.text = "性別：男"
+        } else {
+            lbGender?.text = "性別：女"
+        }
         lbMedicalRecordNumber?.text = "病例號：\(SingletonOfPatient.shared.medicalRecordNumber)"
         lbWardNumber?.text = "病房號：\(SingletonOfPatient.shared.wardNumber)"
         lbBirthday?.text = "生日：\(SingletonOfPatient.shared.birthday)"

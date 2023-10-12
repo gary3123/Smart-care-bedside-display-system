@@ -60,4 +60,5 @@ enum ApiPathConstants: String {
     case patientInfo = "/patientInfo"
     case uploadMedicalRecord = "/uploadMedicalRecord"
     case getMedicalRecord = "/getMedicalRecord"
+    case scanQRCode = "/scanQRCode"
 }

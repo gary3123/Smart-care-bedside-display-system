@@ -31,6 +31,8 @@ class SingletonOfPatient {
     
     public var cases: [String] = []
     
+    public var account: String = ""
+    
     /// 將 Singleton 重設回預設值
     public func reset() {
         name = ""

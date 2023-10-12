@@ -100,6 +100,7 @@ class Login: BaseViewController {
                                                                                     parameters: request)
                 if result.result == 0 {
                     print("登入成功")
+                    SingletonOfPatient.shared.account = (accountTextField?.text!)!
                     let nextVC = PatientListViewController()
                     navigationController?.pushViewController(nextVC, animated: true)
                 } else {

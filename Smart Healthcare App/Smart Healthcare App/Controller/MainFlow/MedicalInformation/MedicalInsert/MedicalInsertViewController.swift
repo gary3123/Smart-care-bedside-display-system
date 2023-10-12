@@ -104,7 +104,8 @@ class MedicalInsertViewController: UIViewController {
             selectTime = formatter.string(from: Date())
         }
         let request: UploadMedicalRecordRequest = UploadMedicalRecordRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber,
-                                                                             medicalRecordID: 1,
+                                                                             ms_id: SingletonOfPatient.shared.account,
+                                                                             medicalRecordID: SingletonOfPatient.shared.medicalRecordID,
                                                                              medication: selectDrugName,
                                                                              drugClass: selectMedicalTypeIndex!,
                                                                              time: selectTime,
@@ -115,6 +116,7 @@ class MedicalInsertViewController: UIViewController {
                                                                                     path: .uploadMedicalRecord,
                                                                                     parameters: request)
                 if result.result == 0 {
+                    NotificationCenter.default.post(name: .callGetMedicalRecords, object: nil)
                     navigationController?.popViewController(animated: true)
                 } else {
                     Alert.showAlert(title: "上傳失敗", message: "請確認網路連線狀況", vc: self, confirmTitle: "確認")

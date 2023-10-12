@@ -34,10 +34,16 @@ class PatientListViewController: UIViewController {
         setupTableView()
         setupNavigation()
         ProgressHUD.showSucceed()
+        // 建立 Notification 接收者
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(reloadTableView),
+                                               name: .reloadPatientsTableView,
+                                               object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchRealmItem()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,8 +98,8 @@ class PatientListViewController: UIViewController {
     // MARK: - CallPatientInfoApi
     
     func callpatientInfoApi() {
-        let request: PatientInfoRequest = PatientInfoRequest(medicalRecordNumber: "P-00000001",
-                                                             medicalRecordId: 1)
+        let request: PatientInfoRequest = PatientInfoRequest(medicalRecordNumber: SingletonOfPatient.shared.medicalRecordNumber,
+                                                             medicalRecordId: SingletonOfPatient.shared.medicalRecordID)
         Task {
             do {
                 let result: GeneralResponse<PatientInfoResponse> = try await manager.requestData(method: .post,
@@ -122,9 +128,16 @@ class PatientListViewController: UIViewController {
                 navigationController?.pushViewController(nextVC, animated: true)
             } catch {
                 print(error)
+                Alert.showAlert(title: "連線錯誤", message: "請確認與伺服器有保持連線", vc: self, confirmTitle: "確認")
             }
             
         }
+    }
+    
+    @objc func reloadTableView() {
+        fetchRealmItem()
+        print(patientList?.count)
+        tvPatientList?.reloadData()
     }
     
     // MARK: - IBAction
@@ -135,6 +148,10 @@ class PatientListViewController: UIViewController {
     }
     
     @IBAction func clickBtnSignOut() {
+        try! realm.write {
+            let allPatients = realm.objects(PatientsRealmModel.self)
+            realm.delete(allPatients)
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -144,21 +161,23 @@ class PatientListViewController: UIViewController {
 
 extension PatientListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return patientList!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvPatientList?.dequeueReusableCell(withIdentifier: PatientTableViewCell.identified, for: indexPath) as! PatientTableViewCell
         cell.igvPatient?.image = UIImage(systemName: "person.crop.square.fill")
-        cell.lbname?.text = "姓名：XXX"
-        cell.lbMRN?.text = "病例號：XXXXXXX"
-        cell.lbWardNum?.text = "病房號：XXXXXX"
-        cell.lbBedNum?.text = "床號：XXX"
+        cell.lbname?.text = "姓名：\(patientList![indexPath.row].name)"
+        cell.lbMRN?.text = "病例號：\(patientList![indexPath.row].medicalRecordNumber)"
+        cell.lbWardNum?.text = "病房號：\(patientList![indexPath.row].wardNumber)"
+        cell.lbBedNum?.text = "床號：\(patientList![indexPath.row].bedNumber)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       callpatientInfoApi()
+        SingletonOfPatient.shared.medicalRecordID = patientList![indexPath.row].medicalRecordID
+        SingletonOfPatient.shared.medicalRecordNumber = patientList![indexPath.row].medicalRecordNumber
+        callpatientInfoApi()
     }
     
 }
