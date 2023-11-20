@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,17 +29,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-KC-zxy">
-                    <rect key="frame" x="16" y="187.5" width="288" height="380.5"/>
+                    <rect key="frame" x="16" y="201" width="288" height="367"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkl-a3-FfG">
-                    <rect key="frame" x="37.5" y="341" width="245" height="40"/>
+                    <rect key="frame" x="37.5" y="352" width="245" height="38.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="18"/>
                     <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcR-Fm-AAd">
-                    <rect key="frame" x="37.5" y="492.5" width="245" height="45.5"/>
+                    <rect key="frame" x="37.5" y="494" width="245" height="44"/>
                     <color key="backgroundColor" red="0.2941176593" green="0.64313727620000005" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="24"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -50,17 +51,29 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-BZ-yn4">
-                    <rect key="frame" x="73.5" y="217.5" width="173" height="38"/>
+                    <rect key="frame" x="73.5" y="231" width="173" height="36.5"/>
                     <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="42"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrn-kx-tTy">
-                    <rect key="frame" x="37.5" y="285.5" width="245" height="35.5"/>
+                    <rect key="frame" x="37.5" y="297.5" width="245" height="34.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="TimeBurner" family="TimeBurner" pointSize="18"/>
                     <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-bm-m23">
+                    <rect key="frame" x="271.5" y="30" width="38.5" height="38.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nlP-bm-m23" secondAttribute="height" multiplier="1:1" id="1FW-Cx-l96"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                    <connections>
+                        <action selector="settingNetworkPathClick" destination="-2" eventType="touchUpInside" id="7IM-k4-eby"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,17 +82,20 @@
                 <constraint firstItem="TW8-KC-zxy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="4Gz-l3-3b1"/>
                 <constraint firstItem="jOx-BZ-yn4" firstAttribute="top" secondItem="TW8-KC-zxy" secondAttribute="top" constant="30" id="6Wn-8i-66f"/>
                 <constraint firstItem="TW8-KC-zxy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="EYO-wl-tKZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nlP-bm-m23" secondAttribute="trailing" constant="10" id="FPj-HS-HHj"/>
                 <constraint firstItem="jOx-BZ-yn4" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.6" id="FrM-N8-ejD"/>
                 <constraint firstItem="Rrn-kx-tTy" firstAttribute="centerX" secondItem="jOx-BZ-yn4" secondAttribute="centerX" id="G8N-P6-ysC"/>
                 <constraint firstItem="jOx-BZ-yn4" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="Hpu-p3-wqf"/>
                 <constraint firstItem="TW8-KC-zxy" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.67" id="J1W-nP-pcN"/>
                 <constraint firstItem="jOx-BZ-yn4" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.1" id="M1S-7j-RhP"/>
                 <constraint firstItem="nkl-a3-FfG" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.105125" id="N1z-WR-MX7"/>
+                <constraint firstItem="nlP-bm-m23" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Q65-2U-7q4"/>
                 <constraint firstItem="nkl-a3-FfG" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="Tt1-uF-ay2"/>
                 <constraint firstItem="lcR-Fm-AAd" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.85" id="Uvo-IR-1TU"/>
                 <constraint firstItem="Rrn-kx-tTy" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.0932983" id="XQo-uV-p8n"/>
                 <constraint firstItem="nkl-a3-FfG" firstAttribute="top" secondItem="Rrn-kx-tTy" secondAttribute="bottom" constant="20" id="a1P-mg-Vvz"/>
                 <constraint firstItem="Rrn-kx-tTy" firstAttribute="width" secondItem="TW8-KC-zxy" secondAttribute="width" multiplier="0.85" id="bt3-No-zxp"/>
+                <constraint firstItem="nlP-bm-m23" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.12" id="faL-B5-hoJ"/>
                 <constraint firstItem="lcR-Fm-AAd" firstAttribute="height" secondItem="TW8-KC-zxy" secondAttribute="height" multiplier="0.12" id="fqm-4j-zT1"/>
                 <constraint firstItem="Rrn-kx-tTy" firstAttribute="top" secondItem="jOx-BZ-yn4" secondAttribute="bottom" constant="30" id="kIl-rC-GKP"/>
                 <constraint firstItem="Rrn-kx-tTy" firstAttribute="centerX" secondItem="TW8-KC-zxy" secondAttribute="centerX" id="m2z-JB-uVL"/>
@@ -91,6 +107,7 @@
         </view>
     </objects>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

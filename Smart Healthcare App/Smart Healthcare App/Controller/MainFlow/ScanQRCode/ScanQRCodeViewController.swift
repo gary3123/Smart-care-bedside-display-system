@@ -213,6 +213,13 @@ class ScanQRCodeViewController: BaseViewController {
                 }
             } catch {
                 print(error)
+                ProgressHUD.dismiss()
+                Alert.showAlert(title: "網路錯誤",
+                                message: "請確保伺服器連接正常",
+                                vc: self,
+                                confirmTitle: "確認") {
+                    self.captureSession.startRunning()
+                }
             }
         }
     }
@@ -250,7 +257,8 @@ extension ScanQRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
                 let str = encrypeStr![0]
                 
                 var decypeStr = str.description.aesDecrypt(key: "imacGetTopRewardimacGetTopReward", iv: iv!.description)
-                decypeStr!.replace("\r", with: "")
+                print(decypeStr)
+                decypeStr!.replace("\u{0C}", with: "")
                
                 // 將字符串轉換為 JSON 數據
                 let jsonData = decypeStr!.data(using: .utf8)!

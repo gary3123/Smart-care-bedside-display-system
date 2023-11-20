@@ -120,6 +120,14 @@ class Login: BaseViewController {
         callLoginApi()
     }
     
+    @IBAction func settingNetworkPathClick() {
+        Alert.showAlertWith(title: "設定網域", message: "範例：192.168.1.51:5000", vc: self, confirmtitle: "確認", canceltitle: "取消") { textField in
+            textField.text = UserPreferences.shared.networkPath
+        } confirm: { textField in
+            UserPreferences.shared.networkPath = textField.text!
+        }
+
+    }
 }
 
 // MARK: - Extension

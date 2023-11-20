@@ -12,6 +12,7 @@
 		3F0247942ABF4B3D006EA177 /* PatientListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */; };
 		3F02479A2AC0A278006EA177 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */; };
 		3F02479B2AC0A278006EA177 /* PatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */; };
+		3FADFA572B0B5B7E00FE3A05 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADFA562B0B5B7E00FE3A05 /* UserPreference.swift */; };
 		3FB632152AC49CC60015AF8D /* MedicalInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632132AC49CC60015AF8D /* MedicalInsertViewController.swift */; };
 		3FB632162AC49CC60015AF8D /* MedicalInsertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB632142AC49CC60015AF8D /* MedicalInsertViewController.xib */; };
 		3FB6321A2AC563210015AF8D /* MedicalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		3F0247922ABF4B3D006EA177 /* PatientListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientListViewController.xib; sourceTree = "<group>"; };
 		3F0247982AC0A278006EA177 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		3F0247992AC0A278006EA177 /* PatientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientTableViewCell.xib; sourceTree = "<group>"; };
+		3FADFA562B0B5B7E00FE3A05 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		3FB632132AC49CC60015AF8D /* MedicalInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalInsertViewController.swift; sourceTree = "<group>"; };
 		3FB632142AC49CC60015AF8D /* MedicalInsertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalInsertViewController.xib; sourceTree = "<group>"; };
 		3FB632182AC563210015AF8D /* MedicalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTableViewCell.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				3FB6330E2ACA8D0E0015AF8D /* Network */,
 				4EF043902A31D963009C9C18 /* Extension */,
 				4EF0438C2A31B5F1009C9C18 /* Alert.swift */,
+				3FADFA562B0B5B7E00FE3A05 /* UserPreference.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				3FB6331B2ACA95B70015AF8D /* PatientInfoRequest.swift in Sources */,
 				4EF0438F2A31D575009C9C18 /* BaseViewController.swift in Sources */,
 				3FB6321F2AC805F20015AF8D /* TextFieldTableViewCell.swift in Sources */,
+				3FADFA572B0B5B7E00FE3A05 /* UserPreference.swift in Sources */,
 				3FB6341B2ACAF7C00015AF8D /* MedicalRecodersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

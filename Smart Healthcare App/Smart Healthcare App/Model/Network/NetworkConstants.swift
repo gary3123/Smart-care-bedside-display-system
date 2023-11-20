@@ -11,7 +11,7 @@ struct NetworkConstants {
     
     static let httpBaseUrl = "http://"
     static let httpsBaseUrl = "https://"
-    static let server = "192.168.1.51:5000"
+    static let server = UserPreferences.shared.networkPath
     
     enum HttpHeaderField: String {
         case authentication = "Authorization"

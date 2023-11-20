@@ -72,4 +72,33 @@ public class Alert{
             vc.present(alertController,animated: true)
         }
     }
+    
+    static func showAlertWith(title: String,
+                              message: String,
+                              vc: UIViewController ,
+                              confirmtitle: String,
+                              canceltitle: String,
+                              setTextField: ((UITextField) -> Void)?,
+                              confirm: ((UITextField) -> Void)?) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title,
+                                                    message: message,
+                                                    preferredStyle: .alert)
+            alertController.addTextField { textfield in
+                setTextField?(textfield)
+            }
+            
+            let confirmAction = UIAlertAction(title: confirmtitle, style: .default) { action in
+                let textField = (alertController.textFields?.first)! as UITextField
+                confirm?(textField)
+            }
+            
+            let cancel = UIAlertAction(title: canceltitle, style: .default)
+            
+            alertController.addAction(cancel)
+            alertController.addAction(confirmAction)
+            
+            vc.present(alertController, animated: true)
+        }
+    }
 }
